@@ -1,0 +1,27 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Dependencias (por si luego agregas npm)
+node_modules/
+
+# Archivos de compilación o distribución
+dist/
+build/
+
+# Variables de entorno
+.env
+
+# Caché
+.cache/

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página web</title>
+</head>
+<body>
+    <h1>Conceptos de HTML y CSS</h1>
+    <h2>¿Qué es HTML?</h2>
+    <p>
+        HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura
+        del contenido de una página web. HTML significa <strong>HyperText Markup Language</strong> o lenguaje de marcado de hypertexto.
+    </p>
+
+    <h2>Tags</h2>
+    <!--Para mostrar etiquetas como texto debes usar entidades HTML.-->
+    <p>
+        Un tag es solo la etiqueta escrita entre <strong>"&lt; &gt;"</strong>,
+        por ejemplo: <strong>"&lt;p&gt;"</strong>, <strong>"&lt;h1&gt;"</strong> etc.
+    </p>
+
+    <h2>Elementos</h2>
+    <p>
+        Un elemento es todo el conjunto.
+        <ol>
+            <li>Tiene etiqueta de apertura <strong>"&lt;&gt;"</strong></li>
+            <li>Contenido como: <strong>"Hola mundo"</strong></li>
+            <li>Etiqueta de cierre <strong>"&lt;/&gt;"</strong></li>
+        </ol>
+        Por ejemplo: <strong>&lt;h1&gt;Hola Mundo&lt;/h1&gt;</strong>
+    </p>
+
+    <h2>headings</h2>
+    <p>
+        Los headings son elementos para definir títulos, subtítulos etc hasta en 6 niveles que van desde h1 hasta h6. <br>
+        
+    </p>
+
+    <h2>Atributos</h2>
+    <p>
+        Los atributos son formas de configurar el elemento, no es contenido que aparezca en pantalla, <br>
+        se pueden usar para indicar estilos, definir enlaces o añadir alternativas de accesibilidad entre 
+        otras cosas. <br><br>
+        Por ejemplo: <br>
+        Para el elemento <Strong>&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;</Strong> <br>
+         <Strong>href="https://google.com"</Strong> es un atributo y el resultado sería el siguiente: <br>
+        <a href="https://google.com">Ir a Google</a>
+    </p>
+
+    <h2>Párrafos</h2>
+    <p>
+        Son elementos que se utilizan para escribir párrafos de texto y se escriben así: <br>
+        <strong>&lt;p&gt;Contenido del párrafo&lt;/p&gt;</strong>
+    </p>
+
+    <h2>Anidando elementos</h2>
+    <p>
+        Se  pueden incluir elementos dentro de otros elementos, por ejemplo, para resaltar una palabra
+        en negrita se puede escribir un texto dentro de un <strong>&lt;p&gt;&lt;/p&gt;</strong> y añadir
+        una etiqueta <strong>&lt;strong&gt;&lt;/strong&gt;</strong> para envolver la palabra que se quiere resaltar, por ejemplo:
+        <br>
+        &lt;p&gt;Este es un texto de ejemplo con <strong>&lt;strong&gt;esta fráse resaltada&lt;/strong&gt;</strong>&lt;/p&gt;</strong>
+        <br><br>
+        El resultado sería el siguiente: <br>
+        Este es un texto de ejemplo con <strong>esta frase resaltada.</strong>
+    </p>
+
+    <h2>Elementos vacíos</h2>
+    <p>
+        Existen algunos elementos vacíos como las imagenes o los <strong>&lt;br&gt;</strong> que no
+        utilizan etiqueta de cierre.
+        <br>
+        Por ejemplo una imagen se representa así: <strong>&lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba" &gt;</strong>
+        <br>
+        Y el resultado es el siguiete:
+    </p>
+
+    <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
+
+    <p>
+        En caso de que no se encuentre la imagen porque la ruta proporcinada en el atributo "src"
+        sea incorrecta se mostrará de la siguiente forma:
+    </p>
+
+    <img src="badimages/firefox-icon.png" alt="Mi imagen de prueba" />
+
+    <p>
+        El atributo "alt" significa "alternative" y es una característica de accesibilidad que 
+        ayuda a personas con ceguera que utilizan lectores de pantalla a reconocer qué imagen tienen en frente,
+        también como en este caso, si la imagen no se encuentra se muestra el texto en lugar de la imagen,
+        es por eso que lo recomendable es usar un alt más descriptivo como <strong>"Logo de firefox"</strong> en este caso.
+    </p>
+
+    <img src="badimages/firefox-icon.png" alt="Logo de firefox" />
+
+    <h2>Listas</h2>
+    <p>
+        Tambien existen las listas, dentro de HTML hay dos tipos; <strong>ordenadas</strong> y <strong>desordenadas</strong>, las ordenadas
+        se representan con <strong>&lt;ol&gt;</strong> que significa <strong>"ordered list"</strong>
+        y <strong>&lt;ul&gt;</strong> que significa <strong>"unrdered list"</strong> ambas contienen elementos
+        <strong>&lt;li&gt;</strong> que significan <strong>"list item"</strong> <br>
+        Ejemplo: <br>
+    </p>
+
+    <p>Esta es una lista desordenada</p>
+
+    <ul>
+        <li>tecnólogos</li>
+        <li>pensadores</li>
+        <li>constructores</li>
+    </ul>
+
+    <p>Esta es una lista ordenada</p>
+
+    <ol>
+        <li>tecnólogos</li>
+        <li>pensadores</li>
+        <li>constructores</li>
+    </ol>
+
+    <h2>Anchors</h2>
+    <p>
+        Anchors o Anclas en español, son los enlaces que hacen que la web sea la web, se representan
+        con el tag <strong>&lt;a&gt;</strong>, tienen como atributo un <strong>href</strong> que
+        define el enlace al que va a llevar y en el contenido puede tener un texto cualquiera. <br>
+        Ejemplo: 
+        <br>
+        <strong>&lt;a href="https://www.mozilla.org/es-AR/about/manifesto/"&gt;Manifesto Mozilla&lt;/a&gt;</strong>
+        <br>
+        Se ve de la siguiente forma:
+        <br>
+        <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
+    </p>
+
+    <h2>Comentarios</h2>
+    <p>
+        Los comentarios son una especie de etiquetas que los programadores insertan
+        para recordarse a ellos y a otros programadores qué hace su código,
+        los comentarios NO son código ejecutable lo que significa que no afectan al comportamiento del sitio.
+        <br>
+        Por ejemplo:
+        <br>
+        <strong>&lt;!-- Esto de aquí es un comentario --&gt;</strong>
+    </p>
+
+</body>
+</html>
+
+
+<!--HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura
+ de tu contenido.-->
+
+<!--Los tags son por ejemplo <h1> y un elemento es por ejemplo <h1>Hola Mundo</h1>-->
+
+<!--Existen elementos como <img> y <br> que son prácticamente lo mismo que un tag-->
+
+<!--Los encabezados van desde h1 hasta h6-->
+
+<!--Los atributos son modificadores para los elementos, por ejemplo, para el elemento 
+<a href="https://google.com">Ir a Google</a> href="https://google.com" es un atributo-->
+
+<!--Los elementos se pueden anidar, ejemplo: <p>Mi gato es <strong>muy</strong> gruñon.</p>-->
+
+<!--Existen los elementos vacíos <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
+ porque no necesita contenido (ejemplo modificando la ruta de la imagen) 
+ (recordemos poner un alt muy descriptivo)-->
+
+<!--Como paréntesis es bueno investigar sobre la accesibilidad para dar una buena experiencia
+a todos nuestros usuarios https://developer.mozilla.org/es/docs/Web/Accessibility -->
+
+<!--La identación es muy importante para entender el código-->
+
+<!--
+Nota: Verás que el encabezamiento de nivel 1 tiene un estilo implícito. 
+No utilices elementos de encabezado para hacer el texto más grande o más oscuro, 
+porque este elemento se utiliza por accesibilidad y otras razones como el posicionamiento 
+en buscadores (Search Engine Optimization, SEO). Intenta crear una secuencia significativa 
+de encabezados en tus páginas, sin saltarte niveles.
+-->
+
+<!--
+Las listas desordenadas son aquellas en las que el orden de los items no es relevante, 
+como en una lista de compras. Estas son encerradas en un elemento <ul> (unordered list).
+
+Las listas ordenadas son aquellas en las que el orden sí es relevante, como en una receta. 
+Estas son encerradas en un elemento <ol> (ordered list).
+-->
+
+<!--anchor/anclas: <a href="https://www.mozilla.org/es-AR/about/manifesto/"
+  >Manifesto Mozilla</a
+>-->
+
+<!---->
+
+<!---->
+
+<!---->

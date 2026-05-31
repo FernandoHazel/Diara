@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/sol.ico">
+    <title>Conceptos de HTML y CSS</title>
+</head>
+<body>
+    <h1>Conceptos de HTML y CSS</h1>
+    <h2>¿Qué es HTML?</h2>
+    <p>
+        Es el esqueleto de todas las páginas web, da estructura al contenido como texto, imágenes y videos. <br>
+        HTML no es un lenguaje de programación, es un lenguaje de marcado que define la estructura del contenido de una página web. <br>
+        HTML significa <strong>HyperText Markup Language</strong> o lenguaje de marcado de hypertexto.
+    </p>
+
+    <h2>Tags</h2>
+    <p>
+        Un tag es solo una etiqueta escrita entre &lt; &gt;, por ejemplo <strong>&lt;h1&gt;</strong>, <strong>&lt;p&gt;</strong>, <strong>&lt;span&gt;</strong>.
+    </p>
+
+    <h2>Elementos</h2>
+    <p>
+        Una unidad de contenido dentro del archivo HTML formado por etiquetas y texto o medios que contiene.
+        <ol>
+            <li>Tienen etiqueta de apertura, por ejemplo "&lt;h1&gt;"</li>
+            <li>Contenido cómo: "Hola mundo"</li>
+            <li>Etiqueta de cierre, por ejemplo: "&lt;/h1&gt;"</li>
+        </ol>
+        Por ejemplo: <strong>&lt;h1&gt;Hola Mundo&lt;/h1&gt;</strong>
+    </p>
+
+    <h2>Headings</h2>
+    <p>
+        Son elementos que se utilizan para los encabezados principales, van desde el h1 hasta el h6, por ejemplo:
+        <h1>Esto es un h1 para un título</h1>
+        <h2>Esto es un h2 para un subtítulo</h2>
+        <h3>Esto es un h3</h3>
+        <h4>Esto es un h4</h4>
+        <h5>Esto es un h5</h5>
+        <h6>Esto es un h6</h6>
+    </p>
+
+    <h2>Atributos</h2>
+    <p>
+        Los atributos son formas de configurar el elemento, no es contenido que aparezca en pantalla, <br>
+        se pueden usar para indicar estilos, definir enlaces o añadir alternativas de accesibilidad entre 
+        otras cosas. <br><br>
+        Por ejemplo: <br>
+        Para el elemento <Strong>&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;</Strong> <br>
+         <Strong>href="https://google.com"</Strong> es un atributo y el resultado sería el siguiente: <br>
+
+        <a href="https://google.com">Ir a Google</a>
+    </p>
+
+    <h2>Atributos booleanos</h2>
+    <p>
+        Los atributos booleanos son como una pregunta que sólo se puede responder con "Si" o "No", en programación se llama "True" o "false". <br>
+        Son palabras que si están presentes en el elemento es porque "Si" se están aplicando, si no están presentes es porque "No" se están aplicando.
+        Por ejemplo en un input si se aplica el atributo "disabled" se obtiene un campo desactivado y si se retira el atributo el campo se activa.
+    </p>
+    <input type="text" disabled />
+    <input type="text" />
+
+    <h2>Párrafos</h2>
+    <p>
+        Son elementos que se utilizan para escribir párrafos de texto y se escriben así: <br>
+        <strong>&lt;p&gt;Contenido del párrafo&lt;/p&gt;</strong>
+    </p>
+
+    <h2>Anidando elementos</h2>
+    <p>
+        Se  pueden incluir elementos dentro de otros elementos, por ejemplo, para resaltar una palabra
+        en negrita se puede escribir un texto dentro de un <strong>&lt;p&gt;&lt;/p&gt;</strong> y añadir
+        una etiqueta <strong>&lt;strong&gt;&lt;/strong&gt;</strong> para envolver la palabra que se quiere resaltar, por ejemplo:
+        <br>
+        &lt;p&gt;Este es un texto de ejemplo con <strong>&lt;strong&gt;esta fráse resaltada&lt;/strong&gt;</strong>&lt;/p&gt;</strong>
+        <br><br>
+        El resultado sería el siguiente: <br>
+        Este es un texto de ejemplo con <strong>esta frase resaltada.</strong>
+    </p>
+
+    <h2>Elementos vacíos</h2>
+    <p>
+        Existen algunos elementos vacíos como las imagenes o los <strong>&lt;br&gt;</strong> que no
+        utilizan etiqueta de cierre.
+        <br>
+        Por ejemplo una imagen se representa así: <strong>&lt;img src="images/firefox-icon.png" alt="Mi imagen de prueba" &gt;</strong>
+        <br>
+        Y el resultado es el siguiete:
+    </p>
+
+    <img src="../images/firefox-icon.png" alt="Logo de Firefox" />
+
+    <p>
+        En caso de que no se encuentre la imagen porque la ruta proporcinada en el atributo "src"
+        sea incorrecta se mostrará de la siguiente forma:
+    </p>
+
+    <img src="images/firefox-icon.png" alt="Logo de Firefox" />
+
+    <p>
+        El atributo "alt" significa "alternative" y es una característica de accesibilidad que 
+        ayuda a personas con ceguera que utilizan lectores de pantalla a reconocer qué imagen tienen en frente,
+        también como en este caso, si la imagen no se encuentra se muestra el texto en lugar de la imagen,
+        es por eso que lo recomendable es usar un alt más descriptivo como <strong>"Logo de firefox"</strong> en este caso.
+    </p>
+
+    <h2>Listas</h2>
+    <p>
+        Tambien existen las listas, dentro de HTML hay dos tipos; <strong>ordenadas</strong> y <strong>desordenadas</strong>, las ordenadas
+        se representan con <strong>&lt;ol&gt;</strong> que significa <strong>"ordered list"</strong>
+        y <strong>&lt;ul&gt;</strong> que significa <strong>"unrdered list"</strong> ambas contienen elementos
+        <strong>&lt;li&gt;</strong> que significan <strong>"list item"</strong> <br>
+        Ejemplo: <br>
+    </p>
+
+    <p>Esta es una lista desordenada</p>
+
+    <ul>
+        <li>tecnólogos</li>
+        <li>pensadores</li>
+        <li>constructores</li>
+    </ul>
+
+    <p>Esta es una lista ordenada</p>
+
+    <ol>
+        <li>tecnólogos</li>
+        <li>pensadores</li>
+        <li>constructores</li>
+    </ol>
+
+    <!--TODO: falta hacer tal cosa-->
+    <h2>Anchors</h2>
+    <p>
+        Anchors o Anclas en español, son los enlaces que hacen que la web sea la web, se representan
+        con el tag <strong>&lt;a&gt;</strong>, tienen como atributo un <strong>href</strong> que
+        define el enlace al que va a llevar y en el contenido puede tener un texto cualquiera. <br>
+        Ejemplo: 
+        <br>
+        <strong>&lt;a href="https://www.mozilla.org/es-AR/about/manifesto/"&gt;Manifesto Mozilla&lt;/a&gt;</strong>
+        <br>
+        Se ve de la siguiente forma:
+        <br>
+        <a href="https://www.mozilla.org/es-AR/about/manifesto/">Manifesto Mozilla</a>
+    </p>
+
+    <h2>Comentarios</h2>
+    <p>
+        Los comentarios son una especie de notas que los programadores insertan
+        para recordarse a ellos y a otros programadores qué hace su código,
+        los comentarios NO son código ejecutable lo que significa que no afectan al comportamiento del sitio.
+        <br>
+        Por ejemplo:
+        <br>
+        <strong>&lt;!-- Esto de aquí es un comentario --&gt;</strong>
+    </p>
+
+    <h2>Entidades</h2>
+    <p>
+        Las entidades nos ayudan a incluir caracteres especiales en HTML. En HTML, los caracteres &lt;, &gt;, &quot;, &apos;, &amp; son caracteres especiales. <br>
+        Son partes de la sintaxis HTML en sí. Entonces se utilizan referencias que empiezan con "&amp;" y terminan con ";"
+        La lista completa de entidades se puede encontrar en la <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">lista de entidades</a>
+    </p>
+
+    <h2>Favicon</h2>
+    <p>
+        Es la imagen o el logo del sitio que aparece junto al título del documento, es un archivo .ico que se inserta en las cabeceras de la siguiente formabr
+        &lt;link rel="icon" href="../images/sol.ico"&gt;
+    </p>
+
+</body>
+</html>
