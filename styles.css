@@ -1,3 +1,31 @@
+/* Anatomy */
+/* CSS se compone de un selector, propiedades y valores */
+/* Cascading Style Sheets */
+body {
+    background-color: lightgray;
+    color: red; /*Este color se aplica a todos los elementos hijos*/
+}
+
+p {
+    color: blue; /*Aquí se sobreescribe el color del body*/
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+  background-color: rgb(197, 93, 161);
+  text-align: center;
+  color: black;
+}
+
+h2 {
+    color: black;
+    background-color: rgb(233, 147, 203);
+    text-align: center;
+}
+
+/* Clases */
+/* Podríamos añadir la clase Nota */
 .error {
     color: red;
     text-decoration: underline;
@@ -6,3 +34,239 @@
 .red {
     color: red;
 }
+
+/* Comments */
+/* Esto de aquí es un comentario */
+
+/* Colors */
+/* Un mismo color se puede especificar de muchas formas por ejemplo:
+
+    1. El nombre del color si es que aparece entre las opciones: color: red;
+    2. En formato hexadecimal: color: #ff0000;
+    3. En formato RGB: color: rgb(255, 0, 0);
+    4. En formato HSL: color: hsl(0, 100%, 50%);
+    5. En formato HWB: color: hwb(0 0% 0%);
+    6. En formato Lab: color: lab(53.24 80.09 67.20);
+    7. En formato LCH: color:  lch(53.24 80.09 40.00);
+    8. En formato sRGB: color: srgb(255 0 0);
+    9. En formato Display P3: color: display-p3(1 0 0);
+    10. En formato color() con espacio de color: color(display-p3 1 0 0);
+    11. O utilizando el propio selector.
+*/
+.primary {
+    color: red;
+}
+
+/* Units */
+/*https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units*/
+/* 
+
+Unidades de longitud absoluta:
+
+    Unidad	Nombre	     Equivale a
+    cm	| Centímetros	| 1cm = 96px/2,54
+    mm	| Milímetros	| 1mm = 1/10 de 1cm
+    Q	| Cuartos de milímetros	|1Q = 1/40 de 1cm
+    in	| Pulgadas	    | 1in = 2,54cm = 96px
+    pc	| Picas	        | 1pc = 1/6 de 1in
+    pt	| Puntos	    | 1pt = 1/72 de 1in
+    px	| Píxeles	    | 1px = 1/96 de 1in
+
+    Unidad	Relativa a
+    em	   | Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width.
+    ex	   | Altura x de la fuente del elemento.
+    ch	   | La medida de avance (ancho) del glifo "0" de la letra del elemento.
+    rem	   | Tamaño de la letra del elemento raíz.
+    lh	   | Altura de la línea del elemento.
+    vw	   | 1% del ancho de la ventana gráfica.
+    vh	   | 1% de la altura de la ventana gráfica.
+    vmin	| 1% de la dimensión más pequeña de la ventana gráfica.
+    vmax	| 1% de la dimensión más grande de la ventana gráfica.
+*/
+
+/* Esta caja tiene un tamaño fijo en pixeles */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+/* Esta caja tiene un tamaño RELATIVO (su anchura es 50% de los pixeles de la anchura su contenedor
+y su altura también es 50% de los pixeles de la altura de su contenedor) */
+.child-box {
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+.relative-box {
+    margin-top: 20px;
+    width: 50vw;
+    height: 200px;
+    background-color: green;
+}
+
+.relative-child-box {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+}
+
+/* Typography */
+.styled-text {
+    font-family: cursive, helvetica, sans-serif; /*Si el navegador no encuentra la primera fuente, intentará con la segunda y así sucesivamente*/
+    font-size: 18px; /*También se pueden usar unidades relativas como em, rem, vw, vh o % */
+    font-weight: bold; /*Valores: normal, bold, bolder, lighter o un número entre 100 y 900 (siendo 400 el equivalente a normal y 700 el equivalente a bold)*/
+    line-height: 1.5; /*Valores: normal, number, length o percentage. El valor normal suele ser 1.2 o 1.3 dependiendo del navegador*/
+    text-align: justify;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px; /*Espacio entre letras*/
+    word-spacing: 4px; /*Espacio entre palabras*/
+}
+
+/*
+Nota: No es necesario escribir todas las propiedades de tipografía en un mismo bloque, 
+se pueden escribir en bloques separados y el navegador aplicará todas las propiedades. 
+Por ejemplo:
+
+    p {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Arial;
+    }
+
+    Se puede escribir de forma más concisa utilizando la propiedad abreviada font:
+
+    p {
+    font: italic bold 20px Arial;
+    }
+*/
+
+/*
+Resumen de propiedades de tipografía:
+| Propiedad         | Función                  |
+| ----------------- | ------------------------ |
+| `font-family`     | Fuente                   |
+| `font-size`       | Tamaño                   |
+| `font-weight`     | Grosor                   |
+| `font-style`      | Cursiva                  |
+| `text-align`      | Alineación               |
+| `line-height`     | Espaciado entre líneas   |
+| `letter-spacing`  | Espaciado entre letras   |
+| `text-transform`  | Mayúsculas/minúsculas    |
+| `text-decoration` | Subrayado, tachado, etc. |
+*/
+
+/* Background */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background */
+
+/* Usando <background-color> */
+/*background: green;*/
+
+/* Usando <bg-image> y <repeat-style> */
+/*background: url("test.jpg") repeat-y;*/
+
+/* Usando <box> and <background-color> */
+/*background: border-box red;*/
+
+/* Una sola imagen, centrada y escalada */
+/*background: no-repeat center/80% url("../img/image.png");*/
+
+.warning {
+  background: red;
+}
+
+.topbanner {
+  background: url("star-solid.gif") #00d repeat-y fixed; /*Aquí se combina una imagen de fondo con un color de fondo, la imagen se repite verticalmente y se fija en su posición aunque se haga scroll*/
+  color: white; /*Aquí sobreescribo el valor de los párrafos para que el texto se vea*/
+}
+
+/* Yo no tengo la imagen de fondo pero se ve así: https://developer.mozilla.org/es/play?uuid=b4b997a305823515a21caa2836e8e5b3fd89553f&state=ZY7NjsIwDIRfxTIXVlpKz9DlzB2OvrhNaLMNbuQEQVXx7huW5Ufa01jj0TczYZeOHldYBWg8x%2FhFmIZQs4hVwg0JwC6x6gixH6taYfnr7c9Oem8h3fX1eIVJqmXI3hv5zCpO2szdWrXgIjAEVm6VQ3dP4yc2MeZBxV8Yphu25qZvdTiJWYFasya5kpAUz63%2FYyf1c8KY9yzi4J0pWncg%2FIBZWZrMCJbTYoSDuzxwufr71pw1dfZo82lYe7z%2BAA%3D%3D&srcPrefix=%2Fes%2Fdocs%2FWeb%2FCSS%2FReference%2FProperties%2Fbackground%2F */
+
+/* Border */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border */
+
+/*
+Esta es una propiedad abreviada para las siguientes propiedades CSS:
+    border-color
+    border-style
+    border-width
+*/
+
+.bordered {
+    border: 2px solid black; /*Aquí se establece un borde de 2 píxeles de ancho, sólido y de color negro */
+}
+
+/* Sizing */
+/*
+Establece las propiedades:
+    - width
+    - height
+    - min-width
+    - min-heigth
+    - max-width
+    - max-heigtn
+*/
+
+/*Aquí estamos definiendo que debe de medir la mitad de la pantalla
+pero no menos de 500 px y no más de 800 px de ancho*/
+.sized-element {
+    background-color: aqua;
+    width: 50vw;
+    min-width: 500px;
+    max-width: 800px;
+}
+
+/* Marging */
+/*El margen lo que hace es añadir espacio hacia el EXTERIOR del elemento */
+.margin-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+/* 
+Lo anterior añade px de distancia a todos los lados del elemento (arriba, abajo, izquierda y derecha)
+También se puede añadir en un sólo lado:
+    - margin-bottom
+    - margin-top
+    - margin-left
+    - margin-right
+*/
+
+/* Padding */
+/*El padding o relleno lo que hace es añadir espacio hacia el INTERIOR del elemento */
+.padding-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+/* Box Model */
+/*
+┌─────────────────────────┐
+│        Margin           │
+│  ┌───────────────────┐  │
+│  │      Border       │  │
+│  │ ┌───────────────┐ │  │
+│  │ │   Padding     │ │  │
+│  │ │ ┌───────────┐ │ │  │
+│  │ │ │Contenido  │ │ │  │
+│  │ │ └───────────┘ │ │  │
+│  │ └───────────────┘ │  │
+│  └───────────────────┘  │
+└─────────────────────────┘
+*/

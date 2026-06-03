@@ -21,40 +21,42 @@ Forms*
 Classes*
 Quotations *
 
-¿Vas a mostrarle el código al profe o la web tiene que describir todo?
-Porque preferiría ahorrar tiempo aplicando los conceptos y poniendo comentarios
 **CSS Concepts**
-Anatomy
-Animations
-Backgrounds
-Borders
+Anatomy*
+Classes*
+Comments*
+Colors*
+Units*
+Typography*
+Backgrounds*
+Borders*
+Sizing*
+Margins*
+Padding*
+
 Box Model
 Box Sizing
-Colors
-Combinators
-Comments
-Cursor
 Display
-Filter Functions
-Flexbox
-Floats
-Grids
-Inheritance
-Margins
-Math Functions
 Overflow
-Padding
 Position
-Pseudo-classes
-Sass
-Selectors
-Sizing
-Transform Functions
-Transition
-Typography
-Units
-Variables
 Visibility
+Selectors
+Combinators
+Pseudo-classes
+Inheritance
+Variables
+
+Flexbox
+Grids
+Floats
+Cursor
+Transition
+Transform Functions
+Animations
+Filter Functions
+Math Functions
+Sass
+
 
 1. Introducción a HTML (La estructura de una página)
 
@@ -94,7 +96,7 @@ Cuando ya puedas crear páginas simples con HTML, empieza CSS.
 
 Fundamentos IMPORTANTES:
 Anatomy
-Comments*
+Comments
 Colors
 Units
 Typography
