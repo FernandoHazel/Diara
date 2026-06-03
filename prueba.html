@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Página web</title>
+    <title>Prueba</title>
 </head>
 <body>
     <h1>Conceptos de HTML y CSS</h1>
@@ -145,6 +145,467 @@
         <strong>&lt;!-- Esto de aquí es un comentario --&gt;</strong>
     </p>
 
+    <h2>Entidades</h2>
+    <p>
+        Las entidades nos ayudan a incluir caracteres especiales en HTML. En HTML, los caracteres &lt;, &gt;, &quot;, &apos;, &amp; son caracteres especiales. <br>
+        Son partes de la sintaxis HTML en sí. Entonces se utilizan referencias que empiezan con "&amp;" y terminan con ";"
+        La lista completa de entidades se puede encontrar en la <a href="https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">lista de entidades</a>
+    </p>
+
+    <h2>Favicon</h2>
+    <p>
+        Es la imagen o el logo del sitio que aparece junto al título del documento, es un archivo .ico que se inserta en las cabeceras de la siguiente formabr
+        &lt;link rel="icon" href="../images/sol.ico"&gt;
+    </p>
+
+    <h2>Text Formation/Text Formatting</h2>
+    <ul>
+        <li>Se utiliza para que los usuarios puedan escanear la página rápidamente y ver cómo está ordenada, de lo contrario es probable que duren
+        poco tiempo en ella.</li>
+        <li>Los lectores de pantalla que usan las personas con discapacidad también se basan en los tags, concretamente los de los títulos, para encontrar el contenido
+        que quieren.</li>
+        <li>Al usar CSS o JavaScript, tener bien formateado el contenido también ayuda a que esos lenguajes los manejen efectivamente.</li>
+    </ul>
+    <p>
+        La siguiente es una tabla con solo algunos de los tags que se pueden usar
+        para mejorar visualmente la página:
+    </p>
+
+    <pre>
+        | Etiqueta   | Uso                       |
+        | ---------- | ------------------------- |
+        | `&lt;strong&gt;` | Importancia               |
+        | `&lt;em&gt;`     | Énfasis                   |
+        | `&lt;mark&gt;`   | Resaltar                  |
+        | `&lt;small&gt;`  | Texto pequeño             |
+        | `&lt;del&gt;`    | Texto eliminado           |
+        | `&lt;ins&gt;`    | Texto agregado            |
+        | `&lt;sub&gt;`    | Subíndice                 |
+        | `&lt;sup&gt;`    | Superíndice               |
+        | `&lt;code&gt;`   | Código                    |
+        | `&lt;pre&gt;`    | Mantener formato original |
+        | `&lt;i&gt;`      | itálica                   |
+        | `&lt;b&gt;`      | negrita                   |
+        | `&lt;u&gt;`      | subrayado                 |
+        | `&lt;blockquote&gt;`| cita                   |
+        | `&lt;q&gt;`      | cita breve                |
+        | `&lt;address&gt;` | dirección                 |
+        | `&lt;sup&gt;`    | super índice               |
+        | `&lt;sub&gt;`    | sub índice                 |
+        | `&lt;var&gt;`    | variables                  |
+        | `&lt;kbd&gt;`    | entradas de teclado        |
+        | `&lt;samp&gt;`   | salida de un programa      |
+        | `&lt;time&gt;`   | salida de un programa      |
+    </pre>
+
+    <h2>Semantic HTML</h2>
+    <p>
+        Es fácil confundir Text Formatting con Semantic HTML pero no son lo mismo:
+    </p>
+
+    <ul>
+        <li><strong>Text Formatting</strong> se enfoca en cómo destacar o presentar texto.</li>
+        <li><strong>Semantic HTML</strong>se enfoca en describir el significado y propósito del contenido.</li>
+    </ul>
+
+    <p>
+        Los motores de busqueda que indizan la página se basan en los tags para saber qué palabras clave son más importantes e influyen en la puntuación de búsqueda
+        de la página, de lo contrario el sitio tendrá bajo rendimiento en buscadores (SEO). <br>
+        Por ejemplo esto es text formatting: <code><strong> &lt;p&gt;Aprende &lt;strong&gt;HTML&lt;/strong&gt; y &lt;em&gt;CSS&lt;/em&gt;.&lt;/p&gt; </strong></code>
+    </p>
+    <p>
+        Y esto es semantic HTML:
+    </p>
+    <pre>
+        <strong>
+        &lt;header&gt;
+        &lt;h1&gt;Mi Blog&lt;/h1&gt;
+        &lt;/header&gt;
+
+        &lt;nav&gt;
+            Menú de navegación
+        &lt;/nav&gt;
+
+        &lt;main&gt;
+            Contenido principal
+        &lt;/main&gt;
+
+        &lt;footer&gt;
+            Derechos reservados
+        &lt;/footer&gt;
+        </strong>
+    </pre>
+
+    <p>
+        Algunos ejemplos de Semantic HTML:
+    </p>
+    <pre>
+        | Etiqueta    | Significado                |
+        | ----------- | -------------------------- |
+        | `&lt;header&gt;`  | Encabezado                 |
+        | `&lt;nav&gt;`     | Navegación                 |
+        | `&lt;main&gt;`    | Contenido principal        |
+        | `&lt;section&gt;` | Sección temática           |
+        | `&lt;article&gt;` | Artículo independiente     |
+        | `&lt;aside&gt;`   | Información complementaria |
+        | `&lt;footer&gt;`  | Pie de página              |
+
+    </pre>
+
+    <h2>Tablas</h2>
+    <p>
+        Las tablas representan datos en dos o más dimensiones, actualmente ya no se le da estilos con atributos de HTML sino <br>
+        con propiedades de CSS como <strong>text-align, background-color, border</strong> etc.
+
+        Se crean usando la etiqueta <strong>&lt;table&gt;</strong> para contener la tabla, <strong>&lt;thead&gt;</strong> para <br>
+        las cabeceras, <strong>&lt;tr&gt;</strong> que significa <strong>"table row"</strong> o fila de la tabla, <strong>&lt;th&gt;</strong> para los <strong>"table headers"</strong>, <br>
+        y <strong>&lt;td&gt;</strong> para la <strong>"table data"</strong> que es el valor de cada campo. Su estructura es la siguiente:
+    </p>
+
+    <pre>
+        table
+        ├── thead
+        │    └── tr
+        │         ├── th
+        │         └── th
+        │
+        └── tbody
+            ├── tr
+            │    ├── td
+            │    └── td
+            │
+            └── tr
+                ├── td
+                └── td
+    </pre>
+
+    <p>
+        Así es como se vería la tabla usada en el apartado de <Strong>Text Formation/Text Formatting</Strong>
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Etiqueta</th>
+                <th>Uso</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>&lt;strong&gt;</td>
+                <td>Importancia</td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td>Énfasis</td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;</td>
+                <td>Resaltar</td>
+            </tr>
+            <tr>
+                <td>&lt;small&gt;</td>
+                <td>Texto pequeño</td>
+            </tr>
+            <tr>
+                <td>&lt;del&gt;</td>
+                <td>Texto eliminado</td>
+            </tr>
+            <tr>
+                <td>&lt;ins&gt;</td>
+                <td>Texto agregado</td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;</td>
+                <td>Subíndice</td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;</td>
+                <td>Superíndice</td>
+            </tr>
+            <tr>
+                <td>&lt;code&gt;</td>
+                <td>Código</td>
+            </tr>
+            <tr>
+                <td>&lt;pre&gt;</td>
+                <td>Mantener formato original</td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;</td>
+                <td>Itálica</td>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td>Negrita</td>
+            </tr>
+            <tr>
+                <td>&lt;u&gt;</td>
+                <td>Subrayado</td>
+            </tr>
+            <tr>
+                <td>&lt;blockquote&gt;</td>
+                <td>Cita</td>
+            </tr>
+            <tr>
+                <td>&lt;q&gt;</td>
+                <td>Cita breve</td>
+            </tr>
+            <tr>
+                <td>&lt;address&gt;</td>
+                <td>Dirección</td>
+            </tr>
+            <tr>
+                <td>&lt;var&gt;</td>
+                <td>Variables</td>
+            </tr>
+            <tr>
+                <td>&lt;kbd&gt;</td>
+                <td>Entradas de teclado</td>
+            </tr>
+            <tr>
+                <td>&lt;samp&gt;</td>
+                <td>Salida de un programa</td>
+            </tr>
+            <tr>
+                <td>&lt;time&gt;</td>
+                <td>Fecha u hora</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Videos</h2>
+    <p>
+        Se utiliza para incrustar videos en un documento HTML o XHTML. <br>
+        Hay una serie de atributos que permiten configurar el video como por ejemplo, <Strong>autoplay</Strong> si queremos <br>
+        que el video se reproduzca automáticamente, <strong>loop</strong> si queremos que se reproduzca en bucle <br>
+        <strong>height, width</strong> etc. <br>
+        Se pueden consultar más atributos en este enlace <a href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/video">video html</a>
+    </p>
+    <p>
+        Este es un ejemplo de un video local con el siguiente código: <br>
+        <code><strong>&lt;video src="Video/Movie_011.mp4" controls width="400"&gt;Tu navegador no admite el elemento &lt;code&gt;video&lt;/code&gt;.&lt;/video&gt;</strong></code>
+    </p>
+
+    <video src="Clase/Video/Movie_011.mp4" controls width="600">
+        Tu navegador no admite el elemento <code>video</code>.
+    </video>
+
+    <h2>iframe</h2>
+    <p>
+        El elemento HTML &lt;iframe&gt; (de inline frame) representa un contexto de navegación anidado, el cual permite incrustrar otra página HTML en la página actual. <br>
+
+        Nota: Al permitir que se muestre contenido de otra web es necesario tener algunas considereaciones de seguridad y delimitar qué se le permite al iframe y qué no. <br>
+        para más detalles se puede consultar <a href="https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/iframe">iframe</a>
+    </p>
+
+    <p>
+        El siguiente es un ejemplo de un iframe mostrando otra página web, concretamente <a href="https://fhazel.com.mx">fhazel.com.mx</a> <br>
+        Código:
+    </p>
+
+    <pre>
+        <strong>
+        &lt;iframe
+        src="https://fhazel.com.mx"
+        title="iframe Example 1"
+        width="400"
+        height="300">
+        &lt;p>Your browser does not support iframes.&lt;/p&gt;
+        &lt;/iframe&gt;
+        </strong>
+    </pre>
+
+    <iframe
+        src="https://fhazel.com.mx"
+        title="iframe Example 1"
+        width="400"
+        height="300">
+        <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <h2>Forms</h2>
+    <p>
+        Los formularios web son uno de los principales puntos de interacción entre un usuario y un sitio web o aplicación. <br>
+        Los formularios permiten a los usuarios la introducción de datos, que generalmente se envían a un servidor web para su procesamiento y almacenamiento. <br>
+        <br>
+        El HTML de un formulario web está compuesto por uno o más controles de formulario (a veces llamados widgets).
+        <br>
+        Los controles pueden ser campos de texto de una o varias líneas, cajas desplegables, botones, casillas de verificación o botones de opción, y se crean principalmente con el elemento <strong>&lt;input&gt;</strong>. <br>
+        <br>
+        Los controles de formulario también se pueden programar para forzar la introducción de formatos o valores específicos (validación de formulario). <br>
+        <br>
+        <!--Hay que usar el enlace para darle estilos CSS al formulario-->
+        Se puede ver más sobre los formularios en este enlace: <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Your_first_form">forms</a>
+    </p>
+
+    <pre>
+        Este es un ejemplo de un formulario simple:
+        <code>
+            <strong>
+                &lt;form action="/my-handling-form-page" method="post"&gt;&lt;/form&gt;
+            </strong>
+        </code>
+    </pre>
+
+    <form action="/my-handling-form-page" method="post">
+    <ul>
+        <li>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="user_name" value="ingresa tu nombre"/>
+        </li>
+        <li>
+            <label for="mail">Correo electrónico:</label>
+            <input type="email" id="mail" name="user_mail" value="ejemplo@gmail.com"/>
+        </li>
+        <li>
+            <label for="msg">Mensaje:</label>
+            <textarea id="msg" name="user_message">Este es un mensaje de ejemplo</textarea>
+        </li>
+    </ul>
+    <button type="submit">Envíe su mensaje</button>
+    </form>
+
+    <p>
+        Ten en cuenta el uso del atributo for en todos los elementos <code><strong>&lt;label&gt;</strong></code>, que toma como valor el id del control de formulario con el que está asociado; así es como asocias un formulario con su etiqueta. <br>
+        En el elemento <code><strong>&lt;input&gt;</strong></code>, el atributo más importante es type. Este atributo es muy importante porque define la forma en que el elemento <code><strong>&lt;input&gt;</strong></code> aparece y se comporta. <br>
+        El elemento <code><strong>&lt;button&gt;</strong></code> también acepta un atributo de type, que a su vez acepta uno de estos tres valores: <strong>submit, reset o button</strong>. <br>
+        <br>
+        Así es como quedó el código al final:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                &lt;form action="/my-handling-form-page" method="post"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;label for="name"&gt;Nombre:&lt;/label&gt;
+                            &lt;input type="text" id="name" name="user_name" value="nombre"/&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;label for="mail"&gt;Correo electrónico:&lt;/label&gt;
+                            &lt;input type="email" id="mail" name="user_mail" value="ejemplo@gmail.com"/&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;label for="msg"&gt;Mensaje:&lt;/label&gt;
+                            &lt;textarea id="msg" name="user_message"&gt;Este es un mensaje de ejemplo&lt;/textarea&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;button type="submit"&gt;Envíe su mensaje&lt;/button&gt;
+                &lt;/form&gt;
+            </strong>
+        </code>
+    </pre>
+
+    <h2>Classes</h2>
+    <p>
+        Las clases son atributos que se pueden añadir a cualquier etiqueta HTML y ayudan a CSS a identificar dichos elementos y aplicarles estilo. <br>
+        por ejemplo, podemos tener la clase <strong>"destacado"</strong> y aplicarla tanto a un div, un span o un párrafo, después en el archivo .css se definen los estilos <br>
+        para la clase <strong>"destacado"</strong> y estos estilos se aplicarán a todos los elementos que implementen dicha clase. <br>
+        <br>
+        Ejemplo de html:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                &lt;p class="rojo">Primer párrafo&lt;/p&gt;
+                &lt;p&gt;Segundo párrafo&lt;/p&gt;
+                &lt;p class="rojo">Tercer párrafo&lt;/p&gt;
+            </strong>
+        </code>
+    </pre>
+
+    <p>
+        Y en el archivo CSS:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                .rojo {
+                    color: red;
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <p>
+        <strong>Resultado:</strong>
+    </p>
+
+    <p class="red">Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <p class="red">Tercer párrafo</p>
+
+    <p>
+        La clase funciona como una categoría o grupo que comparte estilos, por ejemplo la clase <strong>"error"</strong> podría definir elementos que son erroress<br>
+        y por lo tanto comparten estilos como tener un mismo tipo de fuente y texto de color rojo. <br>
+        Por eso es buena práctica usar nombres descriptivos para nombrar a nuestras clases.
+    </p>
+
+    <h2>Quotations</h2>
+    <p>
+        Son las etiquetas que se utilizan para representar citas o fragmentos de otra fuente, es una forma de decirle al navegador "Este texto no es mío, estoy citando a alguien o algo". <br>
+        Además de verse diferente visualmente, tienen significado semántico, lo que ayuda a los buscadores y a las tecnologías de accesibilidad.
+    </p>
+
+    <p>
+        El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+        <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al
+        que delimita es una cita ampliada. Es decir, un párrafo o bloque completo. <br>
+        Ejemplo:
+    </p>
+
+    <p>A continuación se muestra una cita en bloque independiente...</p>
+    <blockquote
+    cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+        <p>
+            El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+            <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
+            al que delimita es una cita ampliada.
+        </p>
+    </blockquote>
+
+    <p>
+        El elemento de cita — <code>&lt;q&gt;</code> — se
+        <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
+            >utiliza para citas breves que no requieren saltos de párrafo.</q
+        >
+    </p>
+
+    <p>
+        Mi profesor siempre dice:
+        <q>Practica todos los días.</q>
+    </p>
+
+    <p>
+    — <code>&lt;abbr&gt;</code> — sirve para las abreviaturas: 
+    </p>
+
+    <p>
+    <abbr title="HyperText Markup Language">
+        HTML
+    </abbr>
+
+    <p>
+        — <code>&lt;address&gt;</code> — sirve para la información de contacto:
+    </p>
+
+    <address>
+        Fernando Ascencio<br>
+        Guadalajara, México<br>
+        fernando@email.com
+    </address>
+
+    <p>
+        Esto se relaciona con HTML semántico porque estas etiquetas también le indican al navegador qué elemento es una cita, dirección etc. <br>
+        Por eso son mejores que unas comillas normales.
+    </p>
+</p>
+
 </body>
 </html>
 
@@ -192,7 +653,121 @@ Estas son encerradas en un elemento <ol> (ordered list).
   >Manifesto Mozilla</a
 >-->
 
-<!---->
+<!-- 
+Text formatting
+https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
+https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
+
+- Se utiliza para que los usuarios puedan escanear la página rápidamente y ver cómo está ordenada, de lo contrario es probable que duren
+poco tiempo en ella.
+- Los motores de busqueda que indizan la página se basan en los tags para saber qué palabras clave son más importantes e influyen en la puntuación de búsqueda
+de la página, de lo contrario el sitio tendrá bajo rendimiento en buscadores (SEO).
+- Los lectores de pantalla que usan las personas con discapacidad también se basan en los tags, concretamente los de los títulos, para encontrar el contenido
+que quieren.
+- Al usar CSS o JavaScript, tener bien formateado el contenido también ayuda a que esos lenguajes los manejen efectivamente.
+
+La siguiente es una tabla con solo algunos de los tags que se pueden usar
+para mejorar la semántica:
+
+| Etiqueta   | Uso                       |
+| ---------- | ------------------------- |
+| `<strong>` | Importancia               |
+| `<em>`     | Énfasis                   |
+| `<mark>`   | Resaltar                  |
+| `<small>`  | Texto pequeño             |
+| `<del>`    | Texto eliminado           |
+| `<ins>`    | Texto agregado            |
+| `<sub>`    | Subíndice                 |
+| `<sup>`    | Superíndice               |
+| `<code>`   | Código                    |
+| `<pre>`    | Mantener formato original |
+| `<i>`      | itálica                   |
+| `<b>`      | negrita                   |
+| `<u>`      | subrayado                 |
+| `<blockquote>`| cita                   |
+|`<q>`       | cita breve                |
+|`<address>` | dirección                 |
+|`<sup>`    | super índice               |
+|`<sub>`    | sub índice                 |
+|`<var>`    | variables                  |
+|`<kbd>`    | entradas de teclado        |
+|`<samp>`   | salida de un programa      |
+|`<time>`   | salida de un programa      |
+
+ejemplos:
+
+<dl>
+        <dt>soliloquio</dt>
+        <dd>
+            En las obras dramáticas, corresponde a cuando un personaje se habla a sí
+            mismo para representar sus pensamientos o sentimientos internos y, en el
+            proceso, transmitirlos a la audiencia (pero no a otros personajes).
+        </dd>
+        <dt>monólogo</dt>
+        <dd>
+            En las obras dramáticas, corresponde a cuando un personaje habla de sus
+            pensamientos en voz alta para compartirlos con el público y cualquier otro
+            personaje presente.
+        </dd>
+        <dt>aparte</dt>
+        <dd>
+            En las obras dramáticas, corresponde a cuando un personaje comparte un
+            comentario solo con la audiencia para dar efecto cómico o dramático. Suele
+            ser un sentimiento, un pensamiento o información adicional.
+        </dd>
+    </dl>
+
+    <p>
+        El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+        <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al
+        que delimita es una cita ampliada.
+    </p>
+
+    <p>A continuación se muestra una cita en bloque independiente...</p>
+    <blockquote
+    cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
+        <p>
+            El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
+            <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
+            al que delimita es una cita ampliada.
+        </p>
+    </blockquote>
+
+    <p>
+        El elemento de cita — <code>&lt;q&gt;</code> — se
+        <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
+            >utiliza para citas breves que no requieren saltos de párrafo.</q
+        >
+    </p>
+
+    <p>
+        Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para
+        estructurar nuestros documentos web.
+    </p>
+
+    <address>
+        <p>Chris Mills, Manchester, The Grim North, Reino Unido</p>
+    </address>
+    
+    Fecha simple estándar 
+    <time datetime="2016-01-20">20 Enero 2016</time>
+    Solo año y mes
+    <time datetime="2016-01">Enero 2016</time>
+    Solo mes y día
+    <time datetime="01-20">20 Enero 2016</time>
+    Solo tiempo, horas y minutos
+    <time datetime="19:30">19:30</time>
+    ¡También puedes hacer segundos y milisegundos!
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    Fecha y hora
+    <time datetime="2016-01-20T19:30">7.30pm, 20 Enero 2016</time>
+    Fecha y hora con desplazamiento de zona horaria
+    <time datetime="2016-01-20T19:30+01:00"
+    >7.30pm, 20 Enero 2016 es 8.30pm en Francia</time
+    >
+     Llamar a un número de semana específico
+    <time datetime="2016-W04">La cuarta semana de 2016</time>
+-->
 
 <!---->
 

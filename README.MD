@@ -12,15 +12,17 @@ Images*
 Links*
 List*
 Tags*
-Text Formation
-Videos
-Classes
-Tables
-Quotations
-Semantic HTML
-Forms
-Iframes
+Text Formation/Text Formatting*
+Semantic HTML*
+Tables*
+Videos*
+Iframes*
+Forms*
+Classes*
+Quotations *
 
+¿Vas a mostrarle el código al profe o la web tiene que describir todo?
+Porque preferiría ahorrar tiempo aplicando los conceptos y poniendo comentarios
 **CSS Concepts**
 Anatomy
 Animations
