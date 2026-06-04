@@ -1,3 +1,136 @@
-span {
+/* Anatomy */
+/* Cascading Style Sheets */
+/* CSS se compone de un selector, propiedades y valores */
+
+body {
+    background-color: lightgray;
+    color: red; /*Este color se aplica a todos los elementos hijos*/
+}
+
+p {
+    color: blue; /*Aquí se sobreescribe el color de los párrafos*/
+    font-size: 16px;
+    text-align: center;
+}
+
+h1 {
+  background-color: rgb(197, 93, 161);
+  text-align: center;
+  color: black;
+}
+
+h2 {
+    background-color: rgb(233, 147, 203);
+    text-align: center;
+    color: black;
+}
+
+/* Clases */
+/* Podríamos añadir la clase Nota */
+.error {
     color: red;
+    text-decoration: underline;
+}
+
+/* Comments */
+/* Los comentarios son notas que se añaden en el archivo CSS y no son código ejecutable */
+
+/* Colors */
+/* Un mismo color se puede especificar de muchas formas por ejemplo:
+
+    1. El nombre del color si es que aparece entre las opciones: color: red;
+    2. En formato hexadecimal: color: #ff0000;
+    3. En formato RGB: color: rgb(255, 0, 0);
+    4. En formato HSL: color: hsl(0, 100%, 50%);
+    5. En formato HWB: color: hwb(0 0% 0%);
+    6. En formato Lab: color: lab(53.24 80.09 67.20);
+    7. En formato LCH: color:  lch(53.24 80.09 40.00);
+    8. En formato sRGB: color: srgb(255 0 0);
+    9. En formato Display P3: color: display-p3(1 0 0);
+    10. En formato color() con espacio de color: color(display-p3 1 0 0);
+    11. O utilizando el propio selector.
+*/
+.primary {
+    color: rgb(24, 151, 51);
+}
+
+/* Units */
+/*https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units*/
+/* 
+
+    Unidades de longitud absoluta:
+
+    Unidad	Nombre	     Equivale a
+    cm	| Centímetros	| 1cm = 96px/2,54
+    mm	| Milímetros	| 1mm = 1/10 de 1cm
+    Q	| Cuartos de milímetros	|1Q = 1/40 de 1cm
+    in	| Pulgadas	    | 1in = 2,54cm = 96px
+    pc	| Picas	        | 1pc = 1/6 de 1in
+    pt	| Puntos	    | 1pt = 1/72 de 1in
+    px	| Píxeles	    | 1px = 1/96 de 1in
+
+    Unidad	Relativa a
+    em	   | Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width.
+    ex	   | Altura x de la fuente del elemento.
+    ch	   | La medida de avance (ancho) del glifo "0" de la letra del elemento.
+    rem	   | Tamaño de la letra del elemento raíz.
+    lh	   | Altura de la línea del elemento.
+    vw	   | 1% del ancho de la ventana gráfica.
+    vh	   | 1% de la altura de la ventana gráfica.
+    vmin	| 1% de la dimensión más pequeña de la ventana gráfica.
+    vmax	| 1% de la dimensión más grande de la ventana gráfica.
+*/
+
+/* Esta caja tiene un tamaño fijo en pixeles */
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+/* Esta caja tiene un tamaño RELATIVO (su anchura es 50% de los pixeles de la anchura su contenedor
+y su altura también es 50% de los pixeles de la altura de su contenedor) */
+.child-box {
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+
+.relative-box {
+    margin-top: 20px;
+    width: 50vw;
+    height: 200px;
+    background-color: green;
+}
+
+.relative-child-box {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+}
+
+/* Typography */
+.styled-text {
+    font-family: cursive, helvetica, sans-serif; /*Si el navegador no encuentra la primera fuente, intentará con la segunda y así sucesivamente*/
+    font-size: 18px; /*También se pueden usar unidades relativas como em, rem, vw, vh o % */
+    font-weight: bold; /*Valores: normal, bold, bolder, lighter o un número entre 100 y 900 (siendo 400 el equivalente a normal y 700 el equivalente a bold)*/
+    line-height: 1.5; /*Valores: normal, number, length o percentage. El valor normal suele ser 1.2 o 1.3 dependiendo del navegador*/
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px; /*Espacio entre letras*/
+    word-spacing: 4px; /*Espacio entre palabras*/
+}
+
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
