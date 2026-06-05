@@ -67,7 +67,7 @@
         Este es un texto de ejemplo con <strong>esta frase resaltada.</strong>
     </p>
 
-    <h2>Elementos vacíos</h2>
+    <h2>Images</h2>
     <p>
         Existen algunos elementos vacíos como las imagenes o los <strong>&lt;br&gt;</strong> que no
         utilizan etiqueta de cierre.
@@ -157,6 +157,23 @@
         Es la imagen o el logo del sitio que aparece junto al título del documento, es un archivo .ico que se inserta en las cabeceras de la siguiente formabr
         &lt;link rel="icon" href="../images/sol.ico"&gt;
     </p>
+
+    <h2>File Paths</h2>
+    <p>
+        Es la manera de encontrar archivos dentro del almacenamiento del sistema. Por ejemplo para poner una imagen es necesario <br>
+        especificar en el atributo "src" la ruta al recurso en los archivos, por lo general los recursos se almacenan en carpetas <br>
+        dentro del proyecto como en una carpeta "resources", "images", "video" etc. <br>
+        <br>
+        Por ejemplo, para poner el logo de firefox usamos el elemento img y especificamos la ruta en el atributo "src".
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                &lt;img src="images/firefox-icon.png" alt="Logo de Firefox" /&gt;
+            </strong>
+        </code>
+    </pre>
 
     <h2>Text Formation/Text Formatting</h2>
     <ul>
@@ -606,7 +623,96 @@
         </p>
     </p>
 
+        <h2>CSS Anatomy</h2>
+    <p>
+        CSS significa Cascading Style Sheets, y es un lenguaje para aplicar estilos a archivos HTML, se compone de selectores, propiedades y valores. <br>
+        Por ejemplo:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                body {
+                    background-color: lightgray;
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <h2 class="primary">Classes</h2>
+    <p>
+        Las clases sirven para crear categorías de estilo, estas clases se pueden aplicar a casi cualquier etiqueta de HTML. <br>
+        Se declaran en el archivo CSS con un "." antes del nombre de la clase. Ejemplo:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                .error {
+                    color: red;
+                    text-decoration: underline;
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <h2>CSS Comments</h2>
+    <p>
+        Son notas que se añaden en el archivo CSS y no son código ejecutable. Se declaran usando "/**/" y escribiendo en medio de los asteriscos. <br>
+        Por ejemplo: 
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                /* Los comentarios son notas que se añaden en el archivo CSS y no son código ejecutable */
+            </strong>
+        </code>
+    </pre>
+
+    <h2>Colors</h2>
+    <p>
+        Un mismo color se puede especificar de muchas formas por ejemplo:
+
+        <ol>
+            <li>El nombre del color si es que aparece entre las opciones: color: red;</li>
+            <li>En formato hexadecimal: color: #ff0000;</li>
+            <li>En formato RGB: color: rgb(255, 0, 0);</li>
+            <li>En formato HSL: color: hsl(0, 100%, 50%);</li>
+            <li>En formato HWB: color: hwb(0 0% 0%);</li>
+            <li>En formato Lab: color: lab(53.24 80.09 67.20);</li>
+            <li>En formato LCH: color:  lch(53.24 80.09 40.00);</li>
+            <li>En formato sRGB: color: srgb(255 0 0);</li>
+            <li>En formato Display P3: color: display-p3(1 0 0);</li>
+            <li>En formato color() con espacio de color: color(display-p3 1 0 0);</li>
+            <li>O utilizando el propio selector de color.</li>
+        </ol>
+    </p>
+
     <h2>Unidades absolutas y relativas</h2>
+    <pre>
+        Unidades de longitud absoluta:
+
+        Unidad	Nombre	     Equivale a
+        cm	| Centímetros	| 1cm = 96px/2,54
+        mm	| Milímetros	| 1mm = 1/10 de 1cm
+        Q	| Cuartos de milímetros	|1Q = 1/40 de 1cm
+        in	| Pulgadas	    | 1in = 2,54cm = 96px
+        pc	| Picas	        | 1pc = 1/6 de 1in
+        pt	| Puntos	    | 1pt = 1/72 de 1in
+        px	| Píxeles	    | 1px = 1/96 de 1in
+
+        Unidad	Relativa a
+        em	   | Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, como width.
+        ex	   | Altura x de la fuente del elemento.
+        ch	   | La medida de avance (ancho) del glifo "0" de la letra del elemento.
+        rem	   | Tamaño de la letra del elemento raíz.
+        lh	   | Altura de la línea del elemento.
+        vw	   | 1% del ancho de la ventana gráfica.
+        vh	   | 1% de la altura de la ventana gráfica.
+        vmin	| 1% de la dimensión más pequeña de la ventana gráfica.
+        vmax	| 1% de la dimensión más grande de la ventana gráfica.
+    </pre>
     <div class="box">
         <div class="child-box"></div>
     </div>
@@ -618,8 +724,17 @@
     </div>
 
     <h2>Tipografía</h2>
+    <p>
+        Son todas las propiedades que se le pueden aplicar a una fuente, a continuación se muestran unos ejemplos:
+    </p>
     <p class="styled-text">
         Este es un texto de ejemplo para mostrar el uso de la tipografía en CSS.
+    </p>
+    <p class="parisienne-regular">
+        Este es un ejemplo de una fuente tomada de google fonts <a href="https://fonts.google.com/selection/embed">parisienne-regular</a>
+    </p>
+    <p class="pinyon-script-regular">
+        Este es un ejemplo de una fuente tomada de google fonts <a href="https://fonts.google.com/selection/embed">parisienne-regular</a>
     </p>
 
     <h2>Background</h2>
@@ -645,6 +760,12 @@
         <div class="inner-box"></div>
     </div>
 
+    <h2>Box Model</h2>
+    <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Box_model">El modelo de caja de CSS</a> <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout">Block_and_inline_layout</a>
+    <p>
+
+    </p>
 </body>
 </html>
 
