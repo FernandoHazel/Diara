@@ -3,13 +3,13 @@
 /* Cascading Style Sheets */
 body {
     background-color: lightgray;
-    color: red; /*Este color se aplica a todos los elementos hijos*/
+    color: black; /*Este color se aplica a todos los elementos hijos*/
+    text-align: justify;
 }
 
 p {
-    color: blue; /*Aquí se sobreescribe el color del body*/
+    color: black; /*Aquí se sobreescribe el color del body*/
     font-size: 16px;
-    text-align: center;
 }
 
 h1 {
@@ -33,6 +33,11 @@ h2 {
 
 .red {
     color: red;
+}
+
+pre {
+    color: red;
+    font-family: monospace;
 }
 
 /* Comments */
@@ -270,3 +275,5 @@ También se puede añadir en un sólo lado:
 │  └───────────────────┘  │
 └─────────────────────────┘
 */
+
+

@@ -77,7 +77,7 @@
         Y el resultado es el siguiete:
     </p>
 
-    <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
+    <img src="Clase/images/firefox-icon.png" alt="Mi imagen de prueba" />
 
     <p>
         En caso de que no se encuentre la imagen porque la ruta proporcinada en el atributo "src"
@@ -761,10 +761,22 @@
     </div>
 
     <h2>Box Model</h2>
-    <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Box_model">El modelo de caja de CSS</a> <br>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout">Block_and_inline_layout</a>
+    
     <p>
-
+        El modelo de caja de CSS es un concepto fundamental que describe cómo se representan los elementos HTML en la página web. <br>
+        Cada elemento se representa como una caja rectangular que consta de cuatro áreas: el contenido, el relleno (padding), el borde (border) y el margen (margin). <br>
+        <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Box_model">El modelo de caja de CSS</a> <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout">Block_and_inline_layout</a>
+    </p>
+    <img src="Clase/images/box-model.png" alt="Diagrama del modelo de caja de CSS" />
+    <p>
+        Estas propiedades de pueden definir usando las palabras: padding, margin, border para añadir espacio al rededor de los elementos, <br>
+        sin embargo también se puede añadir espacio a un sólo lado añadiendo la palabra left, right, top o bottom después de la propiedad, por ejemplo: padding-left, margin-top etc. <br>
+    </p>
+    <p>
+        Es importante saber que existen dos modelos el estándar y el modelo de caja alternativo, el estándar es el que se usa por defecto y el modelo de caja alternativo se activa usando la propiedad <strong>box-sizing: border-box;</strong> <br>
+        La diferencia es que en el modelo estándar el tamaño total de un elemento se calcula sumando el tamaño del contenido, el relleno, el borde y el margen, mientras que en el modelo de caja alternativo el tamaño total de un elemento se calcula sólo con el tamaño del contenido y el borde, <br>
+        es decir, el relleno y el margen no afectan al tamaño total del elemento lo cuál lo hace más predecible. <br>
     </p>
 </body>
 </html>
