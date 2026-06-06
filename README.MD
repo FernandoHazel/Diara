@@ -34,12 +34,12 @@ Sizing*
 Margins*
 Padding*
 
-Box Model
-Box Sizing
-Display
-Overflow
-Position
-Visibility
+Box Model*
+Box Sizing*
+Display*
+Overflow*
+Position*
+Visibility*
 Selectors
 Combinators
 Pseudo-classes
@@ -56,7 +56,6 @@ Animations
 Filter Functions
 Math Functions
 Sass
-
 
 1. Introducción a HTML (La estructura de una página)
 

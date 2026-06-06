@@ -13,9 +13,9 @@ p {
 }
 
 h1 {
-  background-color: rgb(197, 93, 161);
-  text-align: center;
-  color: black;
+    background-color: rgb(197, 93, 161);
+    text-align: center;
+    color: black;
 }
 
 h2 {
@@ -276,4 +276,112 @@ También se puede añadir en un sólo lado:
 └─────────────────────────┘
 */
 
+/* Display */
+.inline-span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+}
 
+.inline-block-span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block;
+}
+
+/* Overflow */
+.overflow-hidden-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: hidden; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+.overflow-scroll-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: scroll; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+.overflow-auto-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: auto; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+/* Position */
+.position-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.relative-child-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.position-absolute-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.absolute-child-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.static-child-box {
+    position: static;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.sticky-child-box {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.position-fixed-child-box {
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    padding: 5px;
+    height: 30px;
+    background-color: lightblue;
+    border: 1px solid black;
+}

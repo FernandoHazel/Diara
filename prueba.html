@@ -761,7 +761,6 @@
     </div>
 
     <h2>Box Model</h2>
-    
     <p>
         El modelo de caja de CSS es un concepto fundamental que describe cómo se representan los elementos HTML en la página web. <br>
         Cada elemento se representa como una caja rectangular que consta de cuatro áreas: el contenido, el relleno (padding), el borde (border) y el margen (margin). <br>
@@ -778,169 +777,200 @@
         La diferencia es que en el modelo estándar el tamaño total de un elemento se calcula sumando el tamaño del contenido, el relleno, el borde y el margen, mientras que en el modelo de caja alternativo el tamaño total de un elemento se calcula sólo con el tamaño del contenido y el borde, <br>
         es decir, el relleno y el margen no afectan al tamaño total del elemento lo cuál lo hace más predecible. <br>
     </p>
+    <h2>Box sizing</h2>
+    <p>
+        En el modelo de caja hay dos formas de calcular el tamaño total de un elemento, el modelo de caja estándar y el modelo de caja alternativo. <br>
+        Para cambiar entre modelos se utiliza la propiedad <code><strong>box-sizing</strong>,</code> que puede tomar los siguientes valores: <code><strong>content-box</strong></code> para el modelo de caja estándar y <code><strong>border-box</strong></code> para el modelo de caja alternativo. <br>
+        <ol>
+            <li><code><strong>content-box</strong></code>, es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.</li>
+            <li><code><strong>border-box</strong></code> le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.</li>
+        </ol>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-sizing">Box sizing</a>
+    </p>
+
+    <h2>Display</h2>
+    <p>
+        La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible). <br>
+        Formalmente la propiedad <code><strong>display</strong></code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en flow layout; la tipo interna establece el layout(Diseño) de los hijos. <br>
+        Algunos valores de display estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando display: flex es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/display">Display</a>
+    </p>
+    <p>
+        El siguiente es un ejemplo de un span que se muestra en línea por defecto:
+    </p>
+    <p style="color: blue;">
+        Soy un párrafo y este es un <span class="inline-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+    </p>
+    <p>
+        Y este es un span con la propiedad <code><strong>display: inline-block;</strong></code> lo que hace que se comporte como un elemento en línea pero que respete las propiedades de ancho y alto:
+    </p>
+    <p style="color: blue;">
+        Soy un párrafo y este es un <span class="inline-block-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+    </p>
+    <p>
+        Además de <code><strong>display: inline-block;</strong></code> existen muchas otras que se pueden usar:
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+            / * Valores display-outside * /
+            display: block;
+            display: inline;
+            display: run-in;
+
+            / * Valores display-inside * /
+            display: flow;
+            display: flow-root;
+            display: table;
+            display: flex;
+            display: grid;
+            display: ruby;
+            display: subgrid;
+
+            / * Valores display-outside>más valores display-inside * /
+            display: block flow;
+            display: inline table;
+            display: flex run-in;
+
+            / * Valores display-listitem * /
+            display: list-item;
+            display: list-item block;
+            display: list-item inline;
+            display: list-item flow;
+            display: list-item flow-root;
+            display: list-item block flow;
+            display: list-item block flow-root;
+            display: flow list-item block;
+
+            / * Valores display-internal * /
+            display: table-row-group;
+            display: table-header-group;
+            display: table-footer-group;
+            display: table-row;
+            display: table-cell;
+            display: table-column-group;
+            display: table-column;
+            display: table-caption;
+            display: ruby-base;
+            display: ruby-text;
+            display: ruby-base-container;
+            display: ruby-text-container;
+
+            / * Valores display-box * /
+            display: contents;
+            display: none;
+
+            / * Valores display-legacy * /
+            display: inline-block;
+            display: inline-table;
+            display: inline-flex;
+            display: inline-grid;
+
+            / * Valores globales * /
+            display: heredar;
+            display: initial;
+            display: unset;
+            </strong>
+        </code>
+    </pre>
+
+    <h2>Overflow</h2>
+    <p>
+        La propiedad CSS <code><strong>overflow</strong></code> especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. <br>
+        En pocas palabras, esta propiedad controla lo que sucede con el contenido que se desborda del área de un elemento. <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/overflow">Overflow</a>
+        Ejemplos:
+    </p>
+    <div class="overflow-hidden-box">
+        <p>
+            Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: hidden;</strong></code> lo que hace que el contenido que se desborda no se muestre.
+        </p>
+    </div>
+    <div class="overflow-scroll-box">
+        <p>
+            Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: scroll;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento.
+        </p>
+    </div>
+     <div class="overflow-auto-box">
+        <p>
+            Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: auto;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento sólo si es necesario.
+        </p>
+    </div>
+
+    <h2>Position</h2>
+    <p>
+        La propiedad CSS <code><strong>position</strong></code> especifica el tipo de posicionamiento de un elemento. <br>
+        Esta propiedad es muy importante porque controla cómo se posicionan los elementos en la página web, y es fundamental para crear diseños complejos. <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/position">Position</a>:
+    </p>
+    <ul>
+        <li><code><strong>static</strong></code>: Es el valor por defecto, los elementos se posicionan de acuerdo al flujo normal del documento.</li>
+        <li><code><strong>relative</strong></code>: El elemento se posiciona de acuerdo al flujo normal del documento, pero luego se desplaza respecto a su posición original utilizando las propiedades top, right, bottom y left.</li>
+        <li><code><strong>absolute</strong></code>: El elemento se posiciona respecto a su primer ancestro posicionado (que no sea static), o respecto al viewport si no hay ningún ancestro posicionado. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+        <li><code><strong>fixed</strong></code>: El elemento se posiciona respecto al viewport, lo que significa que siempre estará en la misma posición incluso cuando se haga scroll. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+        <li><code><strong>sticky</strong></code>: El elemento se comporta como relative hasta que su contenedor alcance un punto específico en el viewport, momento en el cual se comporta como fixed.</li>
+    </ul>
+
+    <p>
+        <code><strong>position: static;</strong></code>
+    </p>
+    <div class="position-container">
+        <div class="static-child-box"></div>
+    </div>
+
+    <p>
+        <code><strong>position: relative;</strong></code>
+        (Solo se mueve respecto a su posición original, pero sigue ocupando el mismo espacio en el flujo del documento)
+    </p>
+    <div class="position-container">
+        <div class="relative-child-box"></div>
+    </div>
+
+    <p>
+        <code><strong>position: sticky;</strong></code>
+    </p>
+    <div class="position-container">
+        <div class="sticky-child-box"></div>
+    </div>
+
+    <p>
+        <code><strong>position: fixed;</strong></code>
+    </p>
+    <div class="position-fixed-child-box">
+        <span>Este es un elemento con position: fixed;</span>
+    </div>
+    <p>
+        Este elemento ya está en la parte superior de la página, así que si haces scroll hacia abajo, el elemento se mantendrá en la misma posición. <br>
+    </p>
+
+    <p>
+        <code><strong>position: absolute;</strong></code>
+        (Se posiciona respecto a su primer ancestro posicionado (En este caso el contendor tiene position: relative;), o respecto al viewport si no hay ningún ancestro posicionado, y no ocupa espacio en el flujo del documento) Mal usado se puede ver encimado sobre otros elementos.
+    </p>
+    <div class="position-container">
+        <div class="absolute-child-box"></div>
+    </div>
+
+    <h2>Visibility</h2>
+    <p>
+        La propiedad CSS <code><strong>visibility</strong></code> especifica si un elemento es visible o no. <br>
+        A diferencia de la propiedad display, que también controla la visibilidad de un elemento, visibility no elimina el elemento del flujo del documento, lo que significa que el espacio que ocupa el elemento sigue siendo reservado en la página web. <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/visibility">Visibility</a>
+    </p>
+    <p>
+        Los valores de la propiedad visibility son:
+    </p>
+    <ul>
+        <li><code><strong>visible</strong></code>: El elemento es visible.</li>
+        <li><code><strong>hidden</strong></code>: El elemento no es visible, pero el espacio que ocupa sigue siendo reservado.</li>
+        <li><code><strong>collapse</strong></code>: Este valor es específico para elementos de tabla, y hace que la fila o columna se colapse completamente, eliminando tanto el elemento como el espacio que ocupa.</li>
+    </ul>
+
+    <h2>Selectors</h2>
+    <p>
+        
+    </p>
+
 </body>
 </html>
-
-
-<!--HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura
- de tu contenido.-->
-
-<!--Los tags son por ejemplo <h1> y un elemento es por ejemplo <h1>Hola Mundo</h1>-->
-
-<!--Existen elementos como <img> y <br> que son prácticamente lo mismo que un tag-->
-
-<!--Los encabezados van desde h1 hasta h6-->
-
-<!--Los atributos son modificadores para los elementos, por ejemplo, para el elemento 
-<a href="https://google.com">Ir a Google</a> href="https://google.com" es un atributo-->
-
-<!--Los elementos se pueden anidar, ejemplo: <p>Mi gato es <strong>muy</strong> gruñon.</p>-->
-
-<!--Existen los elementos vacíos <img src="images/firefox-icon.png" alt="Mi imagen de prueba" />
- porque no necesita contenido (ejemplo modificando la ruta de la imagen) 
- (recordemos poner un alt muy descriptivo)-->
-
-<!--Como paréntesis es bueno investigar sobre la accesibilidad para dar una buena experiencia
-a todos nuestros usuarios https://developer.mozilla.org/es/docs/Web/Accessibility -->
-
-<!--La identación es muy importante para entender el código-->
-
-<!--
-Nota: Verás que el encabezamiento de nivel 1 tiene un estilo implícito. 
-No utilices elementos de encabezado para hacer el texto más grande o más oscuro, 
-porque este elemento se utiliza por accesibilidad y otras razones como el posicionamiento 
-en buscadores (Search Engine Optimization, SEO). Intenta crear una secuencia significativa 
-de encabezados en tus páginas, sin saltarte niveles.
--->
-
-<!--
-Las listas desordenadas son aquellas en las que el orden de los items no es relevante, 
-como en una lista de compras. Estas son encerradas en un elemento <ul> (unordered list).
-
-Las listas ordenadas son aquellas en las que el orden sí es relevante, como en una receta. 
-Estas son encerradas en un elemento <ol> (ordered list).
--->
-
-<!--anchor/anclas: <a href="https://www.mozilla.org/es-AR/about/manifesto/"
-  >Manifesto Mozilla</a
->-->
-
-<!-- 
-Text formatting
-https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs
-https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
-
-- Se utiliza para que los usuarios puedan escanear la página rápidamente y ver cómo está ordenada, de lo contrario es probable que duren
-poco tiempo en ella.
-- Los motores de busqueda que indizan la página se basan en los tags para saber qué palabras clave son más importantes e influyen en la puntuación de búsqueda
-de la página, de lo contrario el sitio tendrá bajo rendimiento en buscadores (SEO).
-- Los lectores de pantalla que usan las personas con discapacidad también se basan en los tags, concretamente los de los títulos, para encontrar el contenido
-que quieren.
-- Al usar CSS o JavaScript, tener bien formateado el contenido también ayuda a que esos lenguajes los manejen efectivamente.
-
-La siguiente es una tabla con solo algunos de los tags que se pueden usar
-para mejorar la semántica:
-
-| Etiqueta   | Uso                       |
-| ---------- | ------------------------- |
-| `<strong>` | Importancia               |
-| `<em>`     | Énfasis                   |
-| `<mark>`   | Resaltar                  |
-| `<small>`  | Texto pequeño             |
-| `<del>`    | Texto eliminado           |
-| `<ins>`    | Texto agregado            |
-| `<sub>`    | Subíndice                 |
-| `<sup>`    | Superíndice               |
-| `<code>`   | Código                    |
-| `<pre>`    | Mantener formato original |
-| `<i>`      | itálica                   |
-| `<b>`      | negrita                   |
-| `<u>`      | subrayado                 |
-| `<blockquote>`| cita                   |
-|`<q>`       | cita breve                |
-|`<address>` | dirección                 |
-|`<sup>`    | super índice               |
-|`<sub>`    | sub índice                 |
-|`<var>`    | variables                  |
-|`<kbd>`    | entradas de teclado        |
-|`<samp>`   | salida de un programa      |
-|`<time>`   | salida de un programa      |
-
-ejemplos:
-
-<dl>
-        <dt>soliloquio</dt>
-        <dd>
-            En las obras dramáticas, corresponde a cuando un personaje se habla a sí
-            mismo para representar sus pensamientos o sentimientos internos y, en el
-            proceso, transmitirlos a la audiencia (pero no a otros personajes).
-        </dd>
-        <dt>monólogo</dt>
-        <dd>
-            En las obras dramáticas, corresponde a cuando un personaje habla de sus
-            pensamientos en voz alta para compartirlos con el público y cualquier otro
-            personaje presente.
-        </dd>
-        <dt>aparte</dt>
-        <dd>
-            En las obras dramáticas, corresponde a cuando un personaje comparte un
-            comentario solo con la audiencia para dar efecto cómico o dramático. Suele
-            ser un sentimiento, un pensamiento o información adicional.
-        </dd>
-    </dl>
-
-    <p>
-        El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
-        <em>elemento HTML de cita en bloque independiente</em>) indica que el texto al
-        que delimita es una cita ampliada.
-    </p>
-
-    <p>A continuación se muestra una cita en bloque independiente...</p>
-    <blockquote
-    cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
-        <p>
-            El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
-            <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
-            al que delimita es una cita ampliada.
-        </p>
-    </blockquote>
-
-    <p>
-        El elemento de cita — <code>&lt;q&gt;</code> — se
-        <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
-            >utiliza para citas breves que no requieren saltos de párrafo.</q
-        >
-    </p>
-
-    <p>
-        Usamos <abbr title="Lenguaje de marcado de hipertexto">HTML</abbr> para
-        estructurar nuestros documentos web.
-    </p>
-
-    <address>
-        <p>Chris Mills, Manchester, The Grim North, Reino Unido</p>
-    </address>
-    
-    Fecha simple estándar 
-    <time datetime="2016-01-20">20 Enero 2016</time>
-    Solo año y mes
-    <time datetime="2016-01">Enero 2016</time>
-    Solo mes y día
-    <time datetime="01-20">20 Enero 2016</time>
-    Solo tiempo, horas y minutos
-    <time datetime="19:30">19:30</time>
-    ¡También puedes hacer segundos y milisegundos!
-    <time datetime="19:30:01.856">19:30:01.856</time>
-    Fecha y hora
-    <time datetime="2016-01-20T19:30">7.30pm, 20 Enero 2016</time>
-    Fecha y hora con desplazamiento de zona horaria
-    <time datetime="2016-01-20T19:30+01:00"
-    >7.30pm, 20 Enero 2016 es 8.30pm en Francia</time
-    >
-     Llamar a un número de semana específico
-    <time datetime="2016-W04">La cuarta semana de 2016</time>
--->
-
-<!---->
-
-<!---->
