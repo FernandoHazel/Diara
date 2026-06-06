@@ -385,3 +385,12 @@ También se puede añadir en un sólo lado:
     background-color: lightblue;
     border: 1px solid black;
 }
+
+/* Pseudoclases / pseudoelements */
+.hover-example:hover {
+    color:blueviolet;
+}
+
+.first-line-example::first-line {
+    color:blueviolet;
+}

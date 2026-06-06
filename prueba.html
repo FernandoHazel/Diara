@@ -969,8 +969,182 @@
 
     <h2>Selectors</h2>
     <p>
-        
+        Los selectores son un concepto de CSS que nos permite añadir los mismos estilos a múltiples elementos del mismo tipo, por ejemplo, un estilo para todos los h2, los p, los spans etc. También se pueden utilizar las clases añadiendo un ".", un "#" para un ID o por medio de atributos, <br>
+        añadir estilos a todas las anclas que tengan un valor específico <code><strong>a[href="https://example.com"]</strong></code> <br>
+        <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Selectors</a>
     </p>
+
+    <pre>
+        <code>
+            <strong>
+
+                Selectores
+                h1 {
+                color: blue;
+                }
+
+                Se pueden combinar selectores, por ejemplo, todos los spans dentro de un párrafo
+                p span {
+                color: blue;
+                }
+
+                Clases
+                .box {
+                }
+
+                Ids
+                #unique {
+                }
+
+                Selectores con atributo
+                a[href="https://example.com"] {
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <h2>Pseudoclases o pseudoelementos</h2>
+    <p>
+        Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase <code><strong>:hover</strong></code>, por ejemplo, aplica estilo a un elemento solo cuando se le pasa el ratón por encima.
+    </p>
+    <pre>
+        <code>
+            <strong>
+                .hover-example:hover {
+                    color:blueviolet;
+                }
+            </strong>
+        </code>
+    </pre>
+    <p class="hover-example">
+        Este es un ejemplo de <code><strong>hover-example: hover</strong></code>
+    </p>
+    <pre>
+        <code>
+            <strong>
+                Esto sólo le aplica estilo a la primera línea
+                .first-line-example::first-line {
+                    color:blueviolet;
+                }
+            </strong>
+        </code>
+    </pre>
+    <p class="first-line-example">
+        Primera línea <br>
+        Segunda línea
+    </p>
+
+    <h2>Combinators</h2>
+    <p>
+        Los combinadores son selectores que ayudan a delimitar elementos del documento, en este ejemplo sólo se aplican estilos a los párrafos que son hijos de los artículos.
+    </p>
+    <pre>
+        <code>
+            <strong>
+                article > p {
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <h2>Inheritance</h2>
+    <p>
+        La herencia se refiere a cuando un elemento hijo adopta las propiedades del padre, por ejemplo:
+    </p>
+    <pre>
+        <code>
+            <strong>
+                body {
+                    color: black; /*Este color se aplica a todos los elementos hijos (h1, p, span etc.)*/
+                }
+            </strong>
+        </code>
+    </pre>
+    <p>
+        También existen las propiedades no heredadas como por ejemplo <code><strong>border</strong></code>.
+    </p>
+    <pre>
+        <code>
+            <strong>
+                p { border: medium solid }
+                &lt;p&gt;Este párrafo tiene &lt;em&gt;texto enfatizado&lt;/em&gt; en su interior.&lt;/p&gt;
+            </strong>
+        </code>
+    </pre>
+    <p>
+        Las palabras "texto enfatizado" no tendrán borde (ya que el valor inicial del estilo de borde es none).
+    </p>
+
+    <h2>Variables</h2>
+    <p>
+        Las variables son propiedades personalizadas, el problema que resuelven es que con ellas no es necesario repetir código por todo el archivo CSS, además permite identificar valores usando semántica para saber para qué deben de ser usados, por ejemplo: <br>
+        El color primario del sitio es el #00ff00, para no tener que repetir ese color en todos los selectores y clases del archivo CSS se puede guardar en una variable que se llame por ejemplo <code><strong>--main-color</strong></code> de esa manera <code><strong>--main-color</strong></code> se puede usar en todo el documento y si llega a ser <br>
+        necesario un cambio de color, sólo hay que hacer la modificación en el valor de la variable y no en todos los lugares donde se implementa.
+        <br>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties">Variables</a>
+    </p>
+    <pre>
+        <code>
+            <strong>
+                Así es cómo se define una variable en CSS (se escriben "--" antes de nombrarla)
+                elemento {
+                --main-bg-color: brown;
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <p>
+        El selector que usemos para las reglas de estilo define el ámbito (scope) en el que podremos usar la propiedad personalizada (variable). Una buena práctica común es declarar variables en la pseudo-clase <code><strong>:root</strong></code>, y así aplicarlas globalmente al documento HTML. <br>
+        Aunque no tiene por qué ser siempre así también se puede delimitar los elementos a los que se les van a aplicar los estilos.
+    </p>
+
+    <pre>
+        <code>
+            <strong>
+                :root {
+                --main-bg-color: brown;
+                }
+            </strong>
+        </code>
+    </pre>
+
+     <pre>
+        <code>
+            <strong>
+                Así es cómo se utiliza la variable
+                elemento {
+                background-color: var(--main-bg-color);
+                }
+            </strong>
+        </code>
+    </pre>
+
+    <p>
+        Nota: Las propiedades personalizadas heredan. Lo que significa que si no se establece ningún valor para una propiedad personalizada en un elemento dado, se utiliza el valor de su elemento padre.
+    </p>
+
+    <h3>Fallback</h3>
+    <p>
+        En caso de que el valor de una variable aún no esté declarado o sea inválido por la razón que sea siempre es buena idea tener un plan b, a eso se le llama fallback y funciona de la siguiente manera:
+    </p>
+    <pre>
+        <code>
+            <strong>
+                .dos {
+                color: var(--my-var, red); /* Rojo (red) si --my-var no esta definida */
+                }
+
+                Si queremos un plan c se puede usar como fallback otra variable que a su vez tiene su propio fallback (no hay que abusar para no causar problemas de rendimiento)
+                .tres {
+                background-color: var(
+                    --my-var,
+                    var(--my-background, pink)
+                ); /* Rosa (pink) si my-var y --my-background no están definidas */
+                }
+            </strong>
+        </code>
+    </pre>
 
 </body>
 </html>

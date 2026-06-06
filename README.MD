@@ -40,10 +40,10 @@ Display*
 Overflow*
 Position*
 Visibility*
-Selectors
-Combinators
-Pseudo-classes
-Inheritance
+Selectors*
+Pseudo-classes*
+Combinators*
+Inheritance*
 Variables
 
 Flexbox
