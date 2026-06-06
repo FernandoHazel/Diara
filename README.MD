@@ -27,7 +27,7 @@ Classes*
 Comments*
 Colors*
 Units*
-Typography*
+Typography* <--- vamos aquí
 Backgrounds*
 Borders*
 Sizing*
@@ -44,7 +44,7 @@ Selectors*
 Pseudo-classes*
 Combinators*
 Inheritance*
-Variables
+Variables*
 
 Flexbox
 Grids
