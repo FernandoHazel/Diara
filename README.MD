@@ -46,8 +46,8 @@ Combinators*
 Inheritance*
 Variables*
 
-Flexbox
-Grids
+Flexbox*
+Grids (Falta explicar las propiedades)
 Floats
 Cursor
 Transition
