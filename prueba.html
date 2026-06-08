@@ -8,11 +8,13 @@
 </head>
 <body>
     <h1>Conceptos de HTML y CSS</h1>
-    <h2>¿Qué es HTML?</h2>
-    <p>
-        HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura
-        del contenido de una página web. HTML significa <strong>HyperText Markup Language</strong> o lenguaje de marcado de hypertexto.
-    </p>
+    <section>
+        <h2>¿Qué es HTML?</h2>
+        <p>
+            HTML no es un lenguaje de programación; es un lenguaje de marcado que define la estructura
+            del contenido de una página web. HTML significa <strong>HyperText Markup Language</strong> o lenguaje de marcado de hypertexto.
+        </p>
+    </section>
 
     <h2>Tags</h2>
     <!--Para mostrar etiquetas como texto debes usar entidades HTML.-->
@@ -1288,50 +1290,105 @@
         </ul>
     </p>
 
-    <h2>Flexbox vs Grid</h2>
-    <p>
-        Tanto Flexbox como Grid nos ayudan a crear layouts responsivos, así qué ¿Cuándo sabemos cuál deberíamos usar?
-        <a href="https://www.youtube.com/watch?v=aEj6k-gi9-s&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=1">Flexbox vs Grid</a>
-        <ul>
-            <li><strong>Flexbox</strong> se enfoca más en los elementos hijos, haciendo que normalmente haya que añadirle reglas especiales a cada uno.</li>
-            <li><strong>Grid</strong> se enfoca más en el contenedor padre, trata de definir la estructura todo en uno.</li>
-        </ul>
-        Cuando no estemos seguros de cuál usar hay que preguntarnos ¿Qué es más importante? ¿Una distribución uniforme enfocada en el padre? Hay que elegir Grid ¿O una distribución flexible en la 
-        que los hijos puedan sobreponerse a la distribución del padre? Entonces sería mejor elegir Flexbox. <br>
-    </p>
+    <section>
+        <h2>Flexbox vs Grid</h2>
+        <p>
+            Tanto Flexbox como Grid nos ayudan a crear layouts responsivos, así qué ¿Cuándo sabemos cuál deberíamos usar?
+            <a href="https://www.youtube.com/watch?v=aEj6k-gi9-s&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=1">Flexbox vs Grid</a>
+            <ul>
+                <li><strong>Flexbox</strong> se enfoca más en los elementos hijos, haciendo que normalmente haya que añadirle reglas especiales a cada uno.</li>
+                <li><strong>Grid</strong> se enfoca más en el contenedor padre, trata de definir la estructura todo en uno.</li>
+            </ul>
+            Cuando no estemos seguros de cuál usar hay que preguntarnos ¿Qué es más importante? ¿Una distribución uniforme enfocada en el padre? Hay que elegir Grid ¿O una distribución flexible en la 
+            que los hijos puedan sobreponerse a la distribución del padre? Entonces sería mejor elegir Flexbox. <br>
+        </p>
 
-    <h3>Flexbox</h3>
-    <p>
-        (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
-    </p>
-    <div class="flex-container">
-        <div class="flex-card">Nuevo</div>
-        <div class="flex-card">Nuevo elemento</div>
-        <div class="flex-card">Próximente</div>
-        <div class="flex-card">Ejemplo</div>
-        <div class="flex-card">Tarjeta flexbox</div>
-        <div class="flex-card">Elemento de prueba</div>
-        <div class="flex-card">Este es un div</div>
-        <div class="flex-card">Nuevo div</div>
-        <div class="flex-card">Nuevo prueba</div>
-        <div class="flex-card">Nuevo</div>
-    </div>
+        <h3>Flexbox</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="flex-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
 
-    <h3>Grid</h3>
-    <p>
-        (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
-    </p>
-    <div class="grid-container">
-        <div class="flex-card">Nuevo</div>
-        <div class="flex-card">Nuevo elemento</div>
-        <div class="flex-card">Próximente</div>
-        <div class="flex-card">Ejemplo</div>
-        <div class="flex-card">Tarjeta flexbox</div>
-        <div class="flex-card">Elemento de prueba</div>
-        <div class="flex-card">Este es un div</div>
-        <div class="flex-card">Nuevo div</div>
-        <div class="flex-card">Nuevo prueba</div>
-        <div class="flex-card">Nuevo</div>
-    </div>
+        <h3>Grid</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="grid-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Floats</h2>
+
+        <p>
+            La propiedad <code><strong>float</strong></code> fue introducida para permitir a los desarrolladores implementar diseños sencillos que incluyeran una imagen flotando dentro de una columna de texto, con el texto envolviendo la parte izquierda o derecha de la imagen. El tipo de cosa que encuentras habitualmente en el diseño de un periódico.
+        </p>
+
+        <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Floats">Floats</a>
+
+        <h3>Ejemplo simple de caja flotante</h3>
+
+        <div class="float-container">
+            <div class="float-box">Caja flotante</div>
+            <p class="float-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+                dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+                ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+                laoreet sit amet.
+            </p>
+
+            <p class="float-text">
+                Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+                orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+                ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+                ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+                ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+                a urna. Ut id ornare felis, eget fermentum sapien.
+            </p>
+
+            <p class="float-text">
+                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+                ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+                est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+                tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+                sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+                vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+        </div>
+        
+        <p>
+            Hoy en día existen técnicas más modernas y mejores pero aún así vale la pena conocer este tema. <br>
+            La manera en como funciona es que el elemento con la propiedad <code><strong>float</strong></code> sale del flujo normal del documento y todo el contenido que esté 
+            por debajo ahora lo envolverá.
+        </p>
+
+        <p>
+            Nota: la propiedad <code><strong>clear</strong></code> limpia los elementos flotados al rededor del flotador, los valores pueden ser 
+            <code><strong>left, rigth, both</strong></code>.
+        </p>
+        
+    </section>
 </body>
 </html>
