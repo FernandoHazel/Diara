@@ -47,7 +47,7 @@ Inheritance*
 Variables*
 
 Flexbox*
-Grids (Falta explicar las propiedades)
+Grid
 Floats
 Cursor
 Transition

@@ -467,6 +467,16 @@ button:first-child {
   background-color: azure;
 }
 
+.grid-image-container {
+    display: grid;
+    justify-content: center;
+    gap: 1em;
+}
+
+.grid-image-container img {
+    width: 500px;
+}
+
 /* Flexbox vs Grid */
 .flex-container {
     background-color: aquamarine;
