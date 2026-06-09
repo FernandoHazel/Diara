@@ -48,10 +48,10 @@ Variables*
 
 Flexbox*
 Grid*
-Floats
-Cursor
-Transition
-Transform Functions
+Floats*
+Cursor*
+Transition*
+Transform Functions*
 Animations
 Filter Functions
 Math Functions

@@ -1388,7 +1388,225 @@
             Nota: la propiedad <code><strong>clear</strong></code> limpia los elementos flotados al rededor del flotador, los valores pueden ser 
             <code><strong>left, rigth, both</strong></code>.
         </p>
-        
     </section>
+
+    <section>
+        <h2>Cursor</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/cursor">Cursor</a>
+        <p>
+            La propiedad CSS:cursor especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
+        </p>
+        <span style="cursor: crosshair">Este es un ejemplo con <code><strong>cursor: crosshair;</strong></code></span>
+    </section>
+
+    <section>
+        <h2>Transition</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Transitions/Using">Transitions</a>
+        <p>
+            Las transiciones son cambios de un valor a otro de manera suave, por ejemplo, el cambio de color de un elemento de blanco a negro en 1 segundo para que no
+            se sienta un salto bruzco. Para hacer uso de las transiciones primero hay que especificar qué propiedades van a ser afectadas usando <code><strong>transition-property</strong></code>
+            luego definiendo la duración con <code><strong>transition-duration</strong></code> y opcionalmente añadiendo un delay <code><strong>transition-delay</strong></code>. <br>
+            Por ejemplo:
+        </p>
+        <ul>
+            <li id="long1">Transición larga, gradual...</li>
+            <li id="fast1">Transición muy rápida...</li>
+            <li id="delay1">Transición larga de un minuto de retraso...</li>
+            <li id="easeout">Usar intervalos de alejamiento...</li>
+            <li id="linear">Usar intervalos lineales...</li>
+            <li id="cubic1">Usar cúbica bézier(0.2, 0.4, 0.7, 0.8)...</li>
+        </ul>
+
+        <pre>
+            <code>
+                <strong>
+                    Este es el código CSS
+
+                    #long1 {
+                        font-size: 14px;
+                        transition: font-size 5s;
+                    }
+
+                    #long1:hover {
+                        font-size: 36px;
+                    }
+
+                    #fast1 {
+                        font-size: 14px;
+                        transition: font-size 0.5s;
+                    }
+
+                    #fast1:hover {
+                        font-size: 36px;
+                    }
+
+                    #delay1 {
+                        font-size: 14px;
+                        transition: font-size 4s 2s; /* duración 4s, retraso 2s */
+                    }
+
+                    #delay1:hover {
+                        font-size: 36px;
+                    }
+
+                    #easeout {
+                        font-size: 14px;
+                        transition: font-size 3s ease-out;
+                    }
+
+                    #easeout:hover {
+                        font-size: 36px;
+                    }
+
+                    #linear {
+                        font-size: 14px;
+                        transition: font-size 3s linear;
+                    }
+
+                    #linear:hover {
+                        font-size: 36px;
+                    }
+
+                    #cubic1 {
+                        font-size: 14px;
+                        transition: font-size 3s cubic-bezier(0.2, 0.4, 0.7, 0.8);
+                    }
+
+                    #cubic1:hover {
+                        font-size: 36px;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            Este es un ejemplo habitual con botones.
+        </p>
+
+        <div class="sidebar">
+            <p><a class="menuButton" href="home">Inicio</a></p>
+            <p><a class="menuButton" href="about">Acerca de</a></p>
+            <p><a class="menuButton" href="contact">Contacto Us</a></p>
+            <p><a class="menuButton" href="links">Vínculos</a></p>
+        </div>
+
+        <pre>
+            <code>
+                <strong>
+                    Este es el código CSS
+
+                    .menuButton {
+                        position: relative;
+                        -moz-transition-property: background-color, color;
+                        -moz-transition-duration: 1s;
+                        -moz-transition-timing-function: ease-out;
+                        -webkit-transition-property: background-color, color;
+                        -webkit-transition-duration: 1s;
+                        -o-transition-property: background-color, color;
+                        -o-transition-duration: 1s;
+                        text-align: left;
+                        background-color: grey;
+                        left: 5px;
+                        top: 5px;
+                        height: 26px;
+                        color: white;
+                        border-color: black;
+                        font-family: sans-serif;
+                        font-size: 20px;
+                        text-decoration: none;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        padding: 2px 4px;
+                        border: solid 1px black;
+                        }
+
+                        .menuButton:hover {
+                        position: relative;
+                        -moz-transition-property: background-color, color;
+                        -moz-transition-duration: 1s;
+                        -moz-transition-timing-function: ease-out;
+                        -webkit-transition-property: background-color, color;
+                        -webkit-transition-duration: 1s;
+                        -o-transition-property: background-color, color;
+                        -o-transition-duration: 1s;
+                        background-color:white;
+                        color:black;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        }
+
+                        .sidebar {
+                        position:absolute;
+                        width: 150px;
+                        height: 170px;
+                        background-color: #eeeeff;
+                        color: black;
+                        border: solid 1px black;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Transform functions</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform">Transforms</a>
+        <p>
+            La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
+        </p>
+    </section>
+    <p>
+        <code><strong>transform: matrix(2, 1, 1, 1, 1, 1);</strong></code><br>
+        Aplica una transformación usando una matriz. Es la forma más avanzada de
+        transformar un elemento porque combina escalado, inclinación y traslación
+        en una sola instrucción. Los primeros cuatro valores controlan la forma y
+        tamaño del elemento, mientras que los dos últimos lo desplazan en los ejes X e Y.
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: matrix(2, 1, 1, 1, 1, 1);">
+
+    <p>
+        <code><strong>transform: translate(120px, 10%);</strong></code><br>
+        Mueve el elemento sin cambiar su tamaño ni su forma. En este caso se
+        desplaza 120 píxeles hacia la derecha y un 10% hacia abajo respecto a su
+        posición original.
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: translate(120px, 10%);">
+
+    <p>
+        <code><strong>transform: scale(2, 0.5);</strong></code><br>
+        Cambia el tamaño del elemento. El valor 2 duplica su ancho y el valor 0.5
+        reduce su altura a la mitad.
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: scale(2, 0.5);">
+
+    <p>
+        <code><strong>transform: rotate(0.5turn);</strong></code><br>
+        Rota el elemento. La unidad <code>turn</code> representa una vuelta
+        completa, por lo que <code>0.5turn</code> equivale a media vuelta
+        (180 grados).
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: rotate(0.5turn);">
+
+    <p>
+        <code><strong>transform: skew(30deg, 20deg);</strong></code><br>
+        Inclina el elemento. El primer valor inclina 30 grados sobre el eje X y el
+        segundo valor 20 grados sobre el eje Y, produciendo un efecto similar a
+        empujar los lados de una figura.
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: skew(30deg, 20deg);">
+
+    <p>
+        <code><strong>transform: scale(0.5) translate(100%, 100%);</strong></code><br>
+        Combina varias transformaciones. Primero reduce el elemento al 50% de su
+        tamaño original y después lo desplaza un 100% de su propio ancho hacia la
+        derecha y un 100% de su propia altura hacia abajo.
+    </p>
+    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+        style="transform: scale(0.5) translate(100%, 100%);">
+
 </body>
 </html>
