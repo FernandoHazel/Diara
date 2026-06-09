@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sassStyles.css">
     <title>Prueba</title>
 </head>
 <body>
@@ -1757,5 +1758,35 @@
         </ul>
     </section>
 
+    <section>
+        <h2>Sass</h2>
+        <a href="https://www.youtube.com/watch?v=BtiiM3jeb_c">Aprende Sass en 15 min</a>
+        <a href="https://desarrolladoresweb.org/sass/que-es-sass-y-para-que-sirve/">Sass: Qué es, Cómo Funciona y Guía Completa para Dominar el Preprocesador CSS</a>
+        <p>
+            Sass es un preprocesador de CSS lo que quiere decir que permite añadir variables y funciones como en un lenjuaje de programación.
+        </p>
+        <ol>
+            <li>Hay que instalar <a href="https://nodejs.org/es">Node</a></li>
+            <li>Hay que instalar <a href="https://sass-lang.com/install/">Sass</a> desde su página oficial o directamente corriendo el comando <code><strong>npm install -g sass</strong></code>después de haber hecho el paso 1</li>
+            <li>Si se usa VSCode también es muy recomendable instalar la extensión de Sass</li>
+            <li>Creamos un archivo de estilos nuevo sobre la raíz del proyecto con extensión <code><strong>.scss</strong></code> en mi caso se llama sassStyles.scss para que no compita de momento con el otro archivo styles.css que ya tengo en el proyecto.</li>
+            <li>Compilar el código de Sass usando el comando <code><strong>sass --watch sassStyles.scss sassStyles.css</strong></code> el primer archivo después del comando watch es el de entrada y el segundo el de salida, ese es el que vinculo al HTML.</li>
+        </ol>
+
+        <p>
+            Nota: el archivo <code><strong>.scss</strong></code> no se puede vincular directamente al archivo html sino que hay que generar un archivo <code><strong>.scss</strong></code> y vincular ese.
+        </p>
+
+        <h3>Ejemplo de uso de Sass</h3>
+
+        <div class="sass-div">
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <div class="sass-div">
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+    </section>
 </body>
 </html>
