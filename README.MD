@@ -53,7 +53,7 @@ Cursor*
 Transition*
 Transform Functions*
 Animations*
-Filter Functions
+Filter Functions*
 Math Functions
 Sass
 

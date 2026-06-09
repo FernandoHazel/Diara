@@ -1648,10 +1648,113 @@
             Este es el resultado:
         </p>
         <img src="Clase/images/firefox-icon.png" alt="Logo de firefox" class="animation-img">
+
+        <div>
+            <p>
+                <strong>Usa <code>transition</code></strong> cuando quieras suavizar cambios de estado:
+            </p>
+            <ul>
+                <li><code>:hover</code></li>
+                <li><code>:focus</code></li>
+                <li>Abrir/cerrar menús</li>
+                <li>Botones</li>
+                <li>Tarjetas</li>
+            </ul>
+
+            <p>
+                <strong>Usa <code>animation</code></strong> cuando quieras crear movimiento o secuencias:
+            </p>
+            <ul>
+                <li>Loaders</li>
+                <li>Spinners</li>
+                <li>Rebotes</li>
+                <li>Desplazamientos</li>
+                <li>Efectos decorativos</li>
+                <li>Elementos que se mueven continuamente</li>
+            </ul>
+        </div>
     </section>
 
     <section>
-        
+        <h2>Filter Functions</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/filter">Filter Functions</a>
+        <p>
+            La propiedad filter de CSS aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes. <br>
+            Varias funciones, como blur() y contrast(), están disponibles para ayudarte a lograr efectos predefinidos.
+        </p>
+
+        <p>
+            <code><strong>filter: blur(5px);</strong></code><br>
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: blur(5px);">
+
+        <p>
+            <code><strong>filter: contrast(200%);</strong></code><br>
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: contrast(200%);">
+
+        <p>
+            <code><strong>filter: grayscale(80%);</strong></code><br>
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: grayscale(80%);">
+
+        <p>
+            <code><strong>filter: hue-rotate(90deg);</strong></code><br>
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: hue-rotate(90deg);">
+
+        <p>
+            <code><strong>filter: drop-shadow(16px 16px 20px red) invert(75%);</strong></code><br>
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: drop-shadow(16px 16px 20px red) invert(75%);">
+    </section>
+
+    <section>
+        <h2>Math Functions</h2>
+        <p>
+            CSS moderno incluye varias funciones matemáticas que permiten hacer cálculos directamente en las hojas de estilo sin necesidad de JavaScript.
+        </p>
+        <ul>
+            <li><code><strong>calc()</strong></code>Es la más utilizada. Permite sumar, restar, multiplicar y dividir valores. Ejemplo: <code><strong>width: calc(100% - 40px);</strong></code>
+            Si el contenedor padre mide 800px, 800px - 40px = 760px. También se pueden mezclar unidades. Ejemplo <code><strong>font-size: calc(1rem + 1vw);</strong></code></li>
+            <li><code><strong>min()</strong></code>Toma el valor más pequeño de una lista <code><strong>width: min(600px, 90%);</strong></code>significa que usa 600px si el 90% es mayor que 600px o usa el 90% si es menor que 600px.</li>
+            <li><code><strong>max()</strong></code>Toma el valor más grande: <code><strong>width: max(300px, 50%);</strong></code> garantiza que el valor nunca es menor a 300px</li>
+            <li><code><strong>clamp()</strong></code>Una de las más utilizadas actualmente, la sintaxis es: <code><strong>clamp(mínimo, ideal, máximo)</strong></code> ejemplo: <code><strong>font-size: clamp(1rem, 4vw, 3rem);</strong></code> significa que nunca es menor de <code><strong>1rem</strong></code>
+            intenta usar <code><strong>4vw</strong></code> y nunca es más de <code><strong>3rem</strong></code></li>
+        </ul>
+        <p>
+            CSS moderno también soporta funciones trigonométricas como:
+        </p>
+        <ul>
+            <li><code><strong>sin()</strong></code></li>
+            <li><code><strong>cos()</strong></code></li>
+            <li><code><strong>tan()</strong></code></li>
+            <li><code><strong>asin()</strong></code></li>
+            <li><code><strong>acos()</strong></code></li>
+            <li><code><strong>atan()</strong></code></li>
+            <li><code><strong>atan2()</strong></code></li>
+        </ul>
+        <p>
+            Ejemplo: <code><strong>transform: translateX(calc(cos(45deg) * 100px));</strong></code> Son especialmente útiles para animaciones y posicionamiento avanzado.
+        </p>
+        <p>
+            También existen:
+        </p>
+        <ul>
+            <li><code><strong>pow()</strong></code></li>
+            <li><code><strong>sqrt()</strong></code></li>
+            <li><code><strong>exp()</strong></code></li>
+            <li><code><strong>log()</strong></code></li>
+            <li><code><strong>pi</strong></code></li>
+            <li><code><strong>e</strong></code></li>
+            <li><code><strong>infinity</strong></code></li>
+            <li><code><strong>NaN</strong></code></li>
+        </ul>
     </section>
 
 </body>
