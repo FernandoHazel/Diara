@@ -52,7 +52,7 @@ Floats*
 Cursor*
 Transition*
 Transform Functions*
-Animations
+Animations*
 Filter Functions
 Math Functions
 Sass

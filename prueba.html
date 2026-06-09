@@ -1553,60 +1553,106 @@
         <p>
             La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
         </p>
+        <p>
+            <code><strong>transform: matrix(2, 1, 1, 1, 1, 1);</strong></code><br>
+            Aplica una transformación usando una matriz. Es la forma más avanzada de
+            transformar un elemento porque combina escalado, inclinación y traslación
+            en una sola instrucción. Los primeros cuatro valores controlan la forma y
+            tamaño del elemento, mientras que los dos últimos lo desplazan en los ejes X e Y.
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: matrix(2, 1, 1, 1, 1, 1);">
+
+        <p>
+            <code><strong>transform: translate(120px, 10%);</strong></code><br>
+            Mueve el elemento sin cambiar su tamaño ni su forma. En este caso se
+            desplaza 120 píxeles hacia la derecha y un 10% hacia abajo respecto a su
+            posición original.
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: translate(120px, 10%);">
+
+        <p>
+            <code><strong>transform: scale(2, 0.5);</strong></code><br>
+            Cambia el tamaño del elemento. El valor 2 duplica su ancho y el valor 0.5
+            reduce su altura a la mitad.
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: scale(2, 0.5);">
+
+        <p>
+            <code><strong>transform: rotate(0.5turn);</strong></code><br>
+            Rota el elemento. La unidad <code>turn</code> representa una vuelta
+            completa, por lo que <code>0.5turn</code> equivale a media vuelta
+            (180 grados).
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: rotate(0.5turn);">
+
+        <p>
+            <code><strong>transform: skew(30deg, 20deg);</strong></code><br>
+            Inclina el elemento. El primer valor inclina 30 grados sobre el eje X y el
+            segundo valor 20 grados sobre el eje Y, produciendo un efecto similar a
+            empujar los lados de una figura.
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: skew(30deg, 20deg);">
+
+        <p>
+            <code><strong>transform: scale(0.5) translate(100%, 100%);</strong></code><br>
+            Combina varias transformaciones. Primero reduce el elemento al 50% de su
+            tamaño original y después lo desplaza un 100% de su propio ancho hacia la
+            derecha y un 100% de su propia altura hacia abajo.
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: scale(0.5) translate(100%, 100%);">
     </section>
-    <p>
-        <code><strong>transform: matrix(2, 1, 1, 1, 1, 1);</strong></code><br>
-        Aplica una transformación usando una matriz. Es la forma más avanzada de
-        transformar un elemento porque combina escalado, inclinación y traslación
-        en una sola instrucción. Los primeros cuatro valores controlan la forma y
-        tamaño del elemento, mientras que los dos últimos lo desplazan en los ejes X e Y.
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: matrix(2, 1, 1, 1, 1, 1);">
 
-    <p>
-        <code><strong>transform: translate(120px, 10%);</strong></code><br>
-        Mueve el elemento sin cambiar su tamaño ni su forma. En este caso se
-        desplaza 120 píxeles hacia la derecha y un 10% hacia abajo respecto a su
-        posición original.
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: translate(120px, 10%);">
+    <section>
+        <h2>Animation</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation">Animations</a>
+        <p>
+            La diferencia entre una transición y una animación es que la transición sólo interpola entre dos valores, por ejemplo, cambiar el tamaño de una fuente de 12px a 24px en un segundo.
+            pero las animaciones permiten definir varios estados mediante keyframes, por ejemplo:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Se define el nombre de la animación, en este caso "crecer"
+                    @keyframes crecer {
+                    
+                    Al inicio el objeto que tenga la animación inicia en su tamaño normal
+                    0% {
+                        transform: scale(1);
+                    }
 
-    <p>
-        <code><strong>transform: scale(2, 0.5);</strong></code><br>
-        Cambia el tamaño del elemento. El valor 2 duplica su ancho y el valor 0.5
-        reduce su altura a la mitad.
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: scale(2, 0.5);">
+                    A la mitad de la animación crece 150%
+                    50% {
+                        transform: scale(1.5);
+                    }
 
-    <p>
-        <code><strong>transform: rotate(0.5turn);</strong></code><br>
-        Rota el elemento. La unidad <code>turn</code> representa una vuelta
-        completa, por lo que <code>0.5turn</code> equivale a media vuelta
-        (180 grados).
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: rotate(0.5turn);">
+                    Al final de la animación regresa a su tamaño normal
+                    100% {
+                        transform: scale(1);
+                    }
+                }
 
-    <p>
-        <code><strong>transform: skew(30deg, 20deg);</strong></code><br>
-        Inclina el elemento. El primer valor inclina 30 grados sobre el eje X y el
-        segundo valor 20 grados sobre el eje Y, produciendo un efecto similar a
-        empujar los lados de una figura.
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: skew(30deg, 20deg);">
+                En este caso se le aplica la animación a las imagenes, en este caso tomará 2 segundos y se repite indefinidamente
+                img {
+                    animation: crecer 2s infinite;
+                }
+                </strong>
+            </code>
+        </pre>
+        <p>
+            Este es el resultado:
+        </p>
+        <img src="Clase/images/firefox-icon.png" alt="Logo de firefox" class="animation-img">
+    </section>
 
-    <p>
-        <code><strong>transform: scale(0.5) translate(100%, 100%);</strong></code><br>
-        Combina varias transformaciones. Primero reduce el elemento al 50% de su
-        tamaño original y después lo desplaza un 100% de su propio ancho hacia la
-        derecha y un 100% de su propia altura hacia abajo.
-    </p>
-    <img src="Clase/images/firefox-icon.png" alt="Logo de firefox"
-        style="transform: scale(0.5) translate(100%, 100%);">
+    <section>
+        
+    </section>
 
 </body>
 </html>
