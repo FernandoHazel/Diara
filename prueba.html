@@ -1780,12 +1780,76 @@
         <h3>Ejemplo de uso de Sass</h3>
 
         <div class="sass-div">
+            <h4>Encabezado</h4>
             <p>Este es un párrafo de ejemplo dentro de un div</p>
         </div>
 
         <div class="sass-div">
+            <h4>Encabezado</h4>
             <p>Este es un párrafo de ejemplo dentro de un div</p>
         </div>
+
+        <div class="sass-div-2">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <div class="sass-div-2">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <pre>
+            <code>
+                <strong>
+                    Así quedó el código:
+
+                    @use 'anidacion';
+
+                    // Los comentarios ya se pueden poner con "//"
+
+                    // Variables
+                    $main-color: rgb(234, 113, 113);
+                    $text-color: green;
+
+                    // Mixins (Es algo muy parecido a las funciones de los lenguajes de programación)
+                    // Importante: el mixin se debe declarar antes de usarlo (debe de estar arriba del selector que lo implementa)
+                    @mixin caja_personalizada($fondo: white, $color: $text-color) {
+                        background-color: $fondo;
+                        border: 4px solid black;
+                        box-shadow: 0px 0px 2px black;
+                        color: $color;
+                        margin: 20px;
+                    }
+
+                    .sass-div {
+                        @include caja_personalizada();
+                    }
+
+                    .sass-div-2 {
+                        @include caja_personalizada($fondo: grey, $color: red);
+                    }
+
+                    // Operadores
+                    .sass-div-2 {
+                        width: 400px - 100px; // Ya no es necesario usar la función calc()
+                    }
+
+                    Y en otro archivo llamado _anidacion.scss
+                    // Anidación
+                    .sass-div {
+                        h4 {
+                            color: blueviolet;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        p {
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            text-decoration: underline;
+                        }
+                    }
+                </strong>
+            </code>
+        </pre>
 
     </section>
 </body>
