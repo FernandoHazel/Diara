@@ -754,5 +754,255 @@
         Este es un ejemplo de una fuente tomada de google fonts <a href="https://fonts.google.com/selection/embed">parisienne-regular</a>
     </p>
 
+    <section>
+        <h2>Background</h2>
+        <p class="topbanner">
+            Starry sky<br />
+            Twinkle twinkle<br />
+            Starry sky
+        </p>
+        <p class="warning">Here is a paragraph</p>
+    </section>
+
+    <section>
+        <h2>Border</h2>
+        <p class="bordered">This is a bordered paragraph.</p>
+    </section>
+
+    <section>
+        <h2>Sizing</h2>
+        <div class="sized-element">Mostrando el tamaño de los elementos</div>
+    </section>
+
+    <section>
+        <h2>Marging</h2>
+        <div class="margin-box"></div>
+        <div class="margin-box"></div>
+    </section>
+
+    <section>
+        <h2>Padding</h2>
+        <div class="padding-box">
+            <div class="inner-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Box Model</h2>
+        <p>
+            El modelo de caja de CSS es un concepto fundamental que describe cómo se representan los elementos HTML en la página web. <br>
+            Cada elemento se representa como una caja rectangular que consta de cuatro áreas: el contenido, el relleno (padding), el borde (border) y el margen (margin). <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Box_model">El modelo de caja de CSS</a> <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout">Block_and_inline_layout</a>
+        </p>
+        <div style="display: grid; align-items: center; justify-content: center;">
+            <img src="images/box-model.png" alt="Diagrama del modelo de caja de CSS" />
+        </div>
+        
+        <p>
+            Estas propiedades se pueden definir usando las palabras: padding, margin, border para añadir espacio al rededor de los elementos, <br>
+            sin embargo también se puede añadir espacio a un sólo lado añadiendo la palabra left, right, top o bottom después de la propiedad, por ejemplo: padding-left, margin-top etc. <br>
+        </p>
+        <p>
+            Es importante saber que existen dos modelos el estándar y el modelo de caja alternativo, el estándar es el que se usa por defecto y el modelo de caja alternativo se activa usando la propiedad <strong>box-sizing: border-box;</strong> <br>
+            La diferencia es que en el modelo estándar el tamaño total de un elemento se calcula sumando el tamaño del contenido, el relleno, el borde y el margen, mientras que en el modelo de caja alternativo el tamaño total de un elemento se calcula sólo con el tamaño del contenido y el borde, <br>
+            es decir, el relleno y el margen no afectan al tamaño total del elemento lo cuál lo hace más predecible. <br>
+        </p>
+    </section>
+
+    <section>
+        <h2>Box sizing</h2>
+        <p>
+            En el modelo de caja hay dos formas de calcular el tamaño total de un elemento, el modelo de caja estándar y el modelo de caja alternativo. <br>
+            Para cambiar entre modelos se utiliza la propiedad <code><strong>box-sizing</strong>,</code> que puede tomar los siguientes valores: <code><strong>content-box</strong></code> para el modelo de caja estándar y <code><strong>border-box</strong></code> para el modelo de caja alternativo. <br>
+            <ol>
+                <li><code><strong>content-box</strong></code>, es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.</li>
+                <li><code><strong>border-box</strong></code> le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.</li>
+            </ol>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-sizing">Box sizing</a>
+        </p>
+
+        <p>Esto es un div rojo de 100px x 100px con relleno de 20 px y borde de 1 px, usando el modelo estándar</p>
+
+        <div class="padding-box">
+            <div class="inner-box"></div>
+        </div>
+
+        <p>Esto es un div rojo de 100px x 100px con relleno de 20 px y borde de 1 px, usando el modelo alternativo</p>
+
+        <div class="padding-alternative-box">
+            <div class="inner-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Display</h2>
+        <p>
+            La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible). <br>
+            Formalmente la propiedad <code><strong>display</strong></code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en flow layout; la tipo interna establece el layout(Diseño) de los hijos. <br>
+            Algunos valores de display estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando display: flex es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/display">Display</a>
+        </p>
+        <p>
+            El siguiente es un ejemplo de un span que se muestra en línea por defecto:
+        </p>
+        <p style="color: blue;">
+            Soy un párrafo y este es un <span class="inline-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+        </p>
+        <p>
+            Y este es un span con la propiedad <code><strong>display: inline-block;</strong></code> lo que hace que se comporte como un elemento en línea pero que respete las propiedades de ancho y alto:
+        </p>
+        <p style="color: blue;">
+            Soy un párrafo y este es un <span class="inline-block-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+        </p>
+        <p>
+            Además de <code><strong>display: inline-block;</strong></code> existen muchas otras que se pueden usar:
+        </p>
+
+        <pre>
+            <code>
+                <strong>
+                / * Valores display-outside * /
+                display: block;
+                display: inline;
+                display: run-in;
+
+                / * Valores display-inside * /
+                display: flow;
+                display: flow-root;
+                display: table;
+                display: flex;
+                display: grid;
+                display: ruby;
+                display: subgrid;
+
+                / * Valores display-outside>más valores display-inside * /
+                display: block flow;
+                display: inline table;
+                display: flex run-in;
+
+                / * Valores display-listitem * /
+                display: list-item;
+                display: list-item block;
+                display: list-item inline;
+                display: list-item flow;
+                display: list-item flow-root;
+                display: list-item block flow;
+                display: list-item block flow-root;
+                display: flow list-item block;
+
+                / * Valores display-internal * /
+                display: table-row-group;
+                display: table-header-group;
+                display: table-footer-group;
+                display: table-row;
+                display: table-cell;
+                display: table-column-group;
+                display: table-column;
+                display: table-caption;
+                display: ruby-base;
+                display: ruby-text;
+                display: ruby-base-container;
+                display: ruby-text-container;
+
+                / * Valores display-box * /
+                display: contents;
+                display: none;
+
+                / * Valores display-legacy * /
+                display: inline-block;
+                display: inline-table;
+                display: inline-flex;
+                display: inline-grid;
+
+                / * Valores globales * /
+                display: heredar;
+                display: initial;
+                display: unset;
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Overflow</h2>
+        <p>
+            La propiedad CSS <code><strong>overflow</strong></code> especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. <br>
+            En pocas palabras, esta propiedad controla lo que sucede con el contenido que se desborda del área de un elemento. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/overflow">Overflow</a>
+            Ejemplos:
+        </p>
+        <div class="overflow-hidden-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: hidden;</strong></code> lo que hace que el contenido que se desborda no se muestre.
+            </p>
+        </div>
+        <div class="overflow-scroll-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: scroll;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento.
+            </p>
+        </div>
+        <div class="overflow-auto-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: auto;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento sólo si es necesario.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Position</h2>
+        <p>
+            La propiedad CSS <code><strong>position</strong></code> especifica el tipo de posicionamiento de un elemento. <br>
+            Esta propiedad es muy importante porque controla cómo se posicionan los elementos en la página web, y es fundamental para crear diseños complejos. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/position">Position</a>:
+        </p>
+        <ul>
+            <li><code><strong>static</strong></code>: Es el valor por defecto, los elementos se posicionan de acuerdo al flujo normal del documento.</li>
+            <li><code><strong>relative</strong></code>: El elemento se posiciona de acuerdo al flujo normal del documento, pero luego se desplaza respecto a su posición original utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>absolute</strong></code>: El elemento se posiciona respecto a su primer ancestro posicionado (que no sea static), o respecto al viewport si no hay ningún ancestro posicionado. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>fixed</strong></code>: El elemento se posiciona respecto al viewport, lo que significa que siempre estará en la misma posición incluso cuando se haga scroll. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>sticky</strong></code>: El elemento se comporta como relative hasta que su contenedor alcance un punto específico en el viewport, momento en el cual se comporta como fixed.</li>
+        </ul>
+
+        <p>
+            <code><strong>position: static;</strong></code>
+        </p>
+        <div class="position-container">
+            <div class="static-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: relative;</strong></code>
+            (Solo se mueve respecto a su posición original, pero sigue ocupando el mismo espacio en el flujo del documento)
+        </p>
+        <div class="position-container">
+            <div class="relative-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: sticky;</strong></code>
+        </p>
+        <div class="position-container">
+            <div class="sticky-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: fixed;</strong></code>
+        </p>
+        <div class="position-fixed-child-box">
+            <span>Este es un elemento con position: fixed;</span>
+        </div>
+        <p>
+            Este elemento ya está en la parte superior de la página, así que si haces scroll hacia abajo, el elemento se mantendrá en la misma posición. <br>
+        </p>
+
+        <p>
+            <code><strong>position: absolute;</strong></code>
+            (Se posiciona respecto a su primer ancestro posicionado (En este caso el contendor tiene position: relative;), o respecto al viewport si no hay ningún ancestro posicionado, y no ocupa espacio en el flujo del documento) Mal usado se puede ver encimado sobre otros elementos.
+        </p>
+        <div class="position-container">
+            <div class="absolute-child-box"></div>
+        </div>
+    </section>
 </body>
 </html>
