@@ -1004,5 +1004,301 @@
             <div class="absolute-child-box"></div>
         </div>
     </section>
+
+    <section>
+        <h2>Selectors</h2>
+        <p>
+            Los selectores son un concepto de CSS que nos permite añadir los mismos estilos a múltiples elementos del mismo tipo, por ejemplo, un estilo para todos los h2, los p, los spans etc. También se pueden utilizar las clases añadiendo un ".", un "#" para un ID o por medio de atributos, <br>
+            añadir estilos a todas las anclas que tengan un valor específico <code><strong>a[href="https://example.com"]</strong></code> <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Selectors</a>
+        </p>
+
+        <pre id="codigo-id">
+            <code>
+                <strong>
+
+                    Selectores
+                    h1 {
+                    color: blue;
+                    }
+
+                    Se pueden combinar selectores, por ejemplo, todos los spans dentro de un párrafo
+                    p span {
+                    color: blue;
+                    }
+
+                    Clases
+                    .box {
+                    }
+
+                    Ids
+                    #unique {
+                    }
+
+                    Selectores con atributo
+                    a[href="https://example.com"] {
+                    }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Pseudoclases o pseudoelementos</h2>
+        <p>
+            Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase <code><strong>:hover</strong></code>, por ejemplo, aplica estilo a un elemento solo cuando se le pasa el ratón por encima. <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Pseudo-clases</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .hover-example:hover {
+                        color:blueviolet;
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p class="hover-example">
+            Este es un ejemplo de <code><strong>hover-example: hover</strong></code>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Esto sólo le aplica estilo a la primera línea
+                    .first-line-example::first-line {
+                        color:blueviolet;
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p class="first-line-example">
+            Primera línea <br>
+            Segunda línea
+        </p>
+    </section>
+
+    <section>
+        <h2>Combinators</h2>
+        <p>
+            Los combinadores son selectores que ayudan a delimitar elementos del documento, en este ejemplo sólo se aplican estilos a los párrafos que son hijos de los artículos.
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    article > p {
+                    }
+                </strong>
+            </code>
+        </pre>
+        <article>
+            <p>
+                Este es un párrafo dentro de un artículo
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Inheritance</h2>
+        <p>
+            La herencia se refiere a cuando un elemento hijo adopta las propiedades del padre, por ejemplo:
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance">Herencia</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    body {
+                        color: black; /*Este color se aplica a todos los elementos hijos (h1, p, span etc.)*/
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p>
+            También existen las propiedades no heredadas como por ejemplo <code><strong>border</strong></code>.
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    p { border: medium solid }
+                    &lt;p&gt;Este párrafo tiene &lt;em&gt;texto enfatizado&lt;/em&gt; en su interior.&lt;/p&gt;
+                </strong>
+            </code>
+        </pre>
+        <p id="no-heredable">Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+
+        <div class="inheritance-container">
+            <div class="inheritance-child"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Variables</h2>
+        <p>
+            Las variables son propiedades personalizadas, el problema que resuelven es que con ellas no es necesario repetir código por todo el archivo CSS, además permite identificar valores usando semántica para saber para qué deben de ser usados, por ejemplo: <br>
+            El color primario del sitio es el #00ff00, para no tener que repetir ese color en todos los selectores y clases del archivo CSS se puede guardar en una variable que se llame por ejemplo <code><strong>--main-color</strong></code> de esa manera <code><strong>--main-color</strong></code> se puede usar en todo el documento y si llega a ser <br>
+            necesario un cambio de color, sólo hay que hacer la modificación en el valor de la variable y no en todos los lugares donde se implementa.
+            <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties">Variables</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Así es cómo se define una variable en CSS (se escriben "--" antes de nombrarla)
+                    elemento {
+                        --main-bg-color: brown;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            El selector que usemos para las reglas de estilo define el ámbito (scope) en el que podremos usar la propiedad personalizada (variable). Una buena práctica común es declarar variables en la pseudo-clase <code><strong>:root</strong></code>, y así aplicarlas globalmente al documento HTML. <br>
+            Aunque no tiene por qué ser siempre así también se puede delimitar los elementos a los que se les van a aplicar los estilos.
+        </p>
+
+        <pre>
+            <code>
+                <strong>
+                    :root {
+                        --main-bg-color: brown;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <pre>
+            <code>
+                <strong>
+                    Así es cómo se utiliza la variable
+                    elemento {
+                        background-color: var(--main-bg-color);
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            Nota: Las propiedades personalizadas heredan. Lo que significa que si no se establece ningún valor para una propiedad personalizada en un elemento dado, se utiliza el valor de su elemento padre.
+        </p>
+
+        <h3>Fallback</h3>
+        <p>
+            En caso de que el valor de una variable aún no esté declarado o sea inválido por la razón que sea siempre es buena idea tener un plan b, a eso se le llama fallback y funciona de la siguiente manera:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .dos {
+                        color: var(--my-var, red); /* Rojo (red) si --my-var no esta definida */
+                    }
+
+                    Si queremos un plan c se puede usar como fallback otra variable que a su vez tiene su propio fallback 
+                    (no hay que abusar para no causar problemas de rendimiento)
+                    .tres {
+                        background-color: var(
+                            --my-var,
+                            var(--my-background, pink)
+                        ); /* Rosa (pink) si my-var y --my-background no están definidas */
+                    }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Flexbox</h2>
+        <p>
+            Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. <br>
+            Es muy útil cuando se quiere hacer cosas como:
+            <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Flexbox">Flexbox</a>
+            <ul>
+                <li>Centrar verticalmente un bloque de contenido dentro de su elemento padre.</li>
+                <li>Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.</li>
+                <li>Hacer que todas las columnas en una compaginación en columnas múltiples adopten la misma altura incluso si contienen cantidades diferentes de contenido.</li>
+            </ul>
+            Lo primero que se debe de hacer es añadir la propiedad <code><strong>display: flex;</strong></code> al elemento padre de los elementos que queremos ordenar. <br>
+            Esto hace que ese elemento se convierta en un contenedor flex y sus hijos en elementos flexibles.
+            Por ejemplo, una <strong>sección</strong> que contiene varios <strong>artículos</strong>:
+            <pre>
+                <code>
+                    <strong>
+                        section {
+                            display: flex;
+                        }
+                    </strong>
+                </code>
+            </pre>
+            Nota: al hacer esto el contenedor pasa a comportarse como un elemento en bloque mientras que sus hijos son flexibles. Para hacer que el padre se comporte como elemento en línea se puede
+            usar <code><strong>display: inline-flex;</strong></code> <br>
+        </p>
+
+        <section class="section-flex-example">
+            <article class="article-flex-example">Article 1</article>
+            <article class="article-flex-example">Article 2</article>
+            <article class="article-flex-example">Article 3</article>
+        </section>
+
+        <p>
+            En el modelo flexible existen dos ejes, <strong>main axis</strong> y <strong>cross axis</strong>: <br>
+        </p>
+        <img src="Clase/images/flex_terms.png" alt="flex axis">
+        
+        <p>
+            El siguiente concepto que hay que entender es la dirección de los elementos hijos. La propiedad <code><strong>flex-direction</strong></code> por defecto tiene un valor <code><strong>row</strong></code>
+            lo que significa que los elementos se posicionan en fila de izquierda a derecha según el idioma que esté configurado en el navegador, esto significa que el eje main va de izquierda a derecha y el cross de 
+            arriba a bajo, si lo que queremos es posicionar los elementos en columna hay que modificar el valor de la propiedad a <code><strong>column</strong></code> para que los elementos se posicionen en columna, 
+            esto mueve el eje main que ahora corre de arriba a abajo y el eje cross cruza horizontalmente.
+        </p>
+
+        <pre>
+                <code>
+                    <strong>
+                        section {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    </strong>
+                </code>
+            </pre>
+
+        <section class="section-flex-example" style="flex-direction: column;">
+            <article class="article-flex-example">Article 1</article>
+            <article class="article-flex-example">Article 2</article>
+            <article class="article-flex-example">Article 3</article>
+        </section>
+
+        <p>
+            Ejemplo de alineación de elementos:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .flex-align-container {
+                        height: 100px;
+                        border: 1px solid black;
+                        background-color: aquamarine;
+
+                        display: flex;
+                        align-items: center; /*Alinea los elementos en el eje cross*/
+                        justify-content: space-around; /*Añade espacio en el eje main*/
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <div class="flex-align-container">
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+        </div>
+
+        <p>
+            Además es posible cambiar la dirección de los elementos con <code><strong>flex-direction: row-reverse;</strong></code>, añadir un salto de línea con <code><strong>flex-wrap: wrap;</strong></code> para los elementos que ya no quepan en el contenedor,
+            añadir proporciones con <code><strong>flex: 1; flex: 2</strong></code> (en este caso los elementos con flex: 2 ocuparían el doble de espacio que los primeros elementos y así sucesivamente). Flexbox incluso permite cambiar el 
+            orden de los elementos sin necesidad de modificar el HTML, cosa que de otra forma sería imposible.
+        </p>
+    </section>
 </body>
 </html>
