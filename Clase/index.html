@@ -1210,7 +1210,8 @@
             Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. <br>
             Es muy útil cuando se quiere hacer cosas como:
             <br>
-            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Flexbox">Flexbox</a>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Flexbox">Flexbox documentation</a>
+            <a href="https://www.youtube.com/watch?v=QFXSgGg-HWo">Flexbox en 15 min</a>
             <ul>
                 <li>Centrar verticalmente un bloque de contenido dentro de su elemento padre.</li>
                 <li>Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.</li>
@@ -1268,6 +1269,15 @@
         </section>
 
         <p>
+            Los ejes de flex se intercambian dependiendo de flex-direction <br>
+            flex-direction: row ------> main axis horizontal <br>
+            flex-direction: column ------> main axis vertical <br>
+            <br>
+            main axis -> justify-content <br>
+            cross axis -> align-items
+        </p>
+
+        <p>
             Ejemplo de alineación de elementos:
         </p>
         <pre>
@@ -1299,6 +1309,192 @@
             añadir proporciones con <code><strong>flex: 1; flex: 2</strong></code> (en este caso los elementos con flex: 2 ocuparían el doble de espacio que los primeros elementos y así sucesivamente). Flexbox incluso permite cambiar el 
             orden de los elementos sin necesidad de modificar el HTML, cosa que de otra forma sería imposible.
         </p>
+
+        <div class="flex-doc-example">
+            <header>
+                <h1>Sample flexbox example</h1>
+            </header>
+
+            <section>
+                <article>
+                <h2>First article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Second article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Third article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Fourth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Fifth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Sixth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Seventh article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Eighth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Ninth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Tenth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Eleventh article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Twelfth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <section>
+        <h2>Grid</h2>
+        <p>
+            Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas.
+            Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados en CSS.
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Grid_layout">Grid documentation</a>
+            <a href="https://www.youtube.com/watch?v=-kgGATnsPbs">CSS Grid en 15 min</a>
+            <a href="https://www.youtube.com/watch?v=JYfiaSKeYhE&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=3">Curso CSS Grid: ¡El único tutorial de cuadrícula que necesitarás!</a>
+        </p>
+
+        <div class="wrapper">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+            <div class="six">Six</div>
+        </div>
+
+        <p>
+            Estos son llamados "Bento Grids" que son distribuciones en las que algunos elementos abarcan más de una fila o columna para crear sitios más interesantes. Se parecen mucho a un plato de comida china. <br>
+            Para crear un grid se debe añadir la siguiente propiedad al contenedor de los elementos <code><strong>display: grid; o display: inline-grid</strong></code>
+            <a href="https://www.youtube.com/watch?v=JYfiaSKeYhE&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=2">CSS Grid Course</a>
+        </p>
+
+        <div class="grid-image-container">
+            <img src="images/Comida china.png" alt="Comida china">
+            <img src="images/Bento grid1.png" alt="Bento grid 1">
+            <img src="images/Bento grid2.png" alt="Bento grid 2">
+        </div>
+
+        <p>
+            Algunos de los conceptos más útiles de CSS Grid son los siguientes:
+            <ul>
+                <li><code><strong>grid-template-colums</strong></code> permite definir cuántas columntas y de qué medida habrá en la cuadrícula.</li>
+                <li><code><strong>grid-template-rows</strong></code> permite definir cuántas filas y de qué tamaño habrá en la cuadrícula.</li>
+                <li><code><strong>grid-template-areas</strong></code> permite definir cuántas columnas o filas abarcará un mismo elemento.</li>
+                <li><code><strong>repeat()</strong></code> es una función que permite repetir las columnas o filas con menos código.</li>
+                <li><code><strong>fr</strong></code> es una medida que representa cantidad de fracciones que debe de abarcar un elemento en alto o ancho.</li>
+                <li><code><strong>grid-auto-rows y grid-auto-columns.</strong></code> automatizan grid-template-colums y grid-template-rows para que la cuadrícula genere 
+                    la cantidad de filas o columnas que crea necesarias usando la misma medida.</li>
+                <li><code><strong>minmax()</strong></code> es una función que ayuda a definir una medida mínima y máxima para los elementos de modo que puedan adaptar su tamaño al espacio disponible en la pantalla.
+                Una combinación útil es minmax(100px, auto) para que el elemento no se pueda achicar demasiado pero si expandirse según se requiera.</li>
+                <li><code><strong>grid-column-start, grid-column-end, grid-row-start, grid-row-end</strong></code> sirven para decirle a un elemento en qué linea de la cuadrícula debe comenzar y terminar.</li>
+                <li><code><strong>grid-column-gap, grid-row-gap, grid-gap</strong></code> se utilizan para crear espacio entre las celdas de la cuadrícula para que los elementos no queden pegados unos con otros.</li>
+                <li>Dentro de una misma celda se pueden poner varios elementos uno sobre otro usando <code><strong>z-index</strong></code>, por ejemplo, para poner un texto con una imagen o video de fondo.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section>
+        <h2>Flexbox vs Grid</h2>
+        <p>
+            Tanto Flexbox como Grid nos ayudan a crear layouts responsivos, así qué ¿Cuándo sabemos cuál deberíamos usar?
+            <a href="https://www.youtube.com/watch?v=aEj6k-gi9-s&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=1">Flexbox vs Grid</a>
+            <ul>
+                <li><strong>Flexbox</strong> se enfoca más en los elementos hijos, haciendo que normalmente haya que añadirle reglas especiales a cada uno.</li>
+                <li><strong>Grid</strong> se enfoca más en el contenedor padre, trata de definir la estructura todo en uno.</li>
+            </ul>
+            Cuando no estemos seguros de cuál usar hay que preguntarnos ¿Qué es más importante? ¿Una distribución uniforme enfocada en el padre? Hay que elegir Grid ¿O una distribución flexible en la 
+            que los hijos puedan sobreponerse a la distribución del padre? Entonces sería mejor elegir Flexbox. <br>
+        </p>
+
+        <h3>Flexbox</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="flex-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
+
+        <h3>Grid</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="grid-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
     </section>
 </body>
 </html>
