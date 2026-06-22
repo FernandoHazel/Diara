@@ -55,7 +55,7 @@ Transform Functions*
 Animations*
 Filter Functions*
 Math Functions*
-Sass
+Sass*
 
 1. Introducción a HTML (La estructura de una página)
 
