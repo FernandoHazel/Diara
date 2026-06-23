@@ -27,7 +27,7 @@ Classes*
 Comments*
 Colors*
 Units*
-Typography* <--- vamos aquí
+Typography*
 Backgrounds*
 Borders*
 Sizing*
@@ -38,16 +38,16 @@ Box Model*
 Box Sizing*
 Display*
 Overflow*
-Position*
-Visibility*
+Position* 
+Visibility* 
 Selectors*
 Pseudo-classes*
 Combinators*
-Inheritance*
-Variables*
+Inheritance* 
+Variables* 
 
-Flexbox*
-Grid*
+Flexbox* 
+Grid* <--- vamos aquí (Vamos a media página de la documentación)
 Floats*
 Cursor*
 Transition*

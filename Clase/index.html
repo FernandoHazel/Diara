@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sassStyle.css">
     <link rel="icon" href="images/sol.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -172,7 +173,7 @@
     <h2>Favicon</h2>
     <p>
         Es la imagen o el logo del sitio que aparece junto al título del documento, es un archivo .ico que se inserta en las cabeceras de la siguiente formabr
-        &lt;link rel="icon" href="../images/sol.ico"&gt;
+        &lt;link rel="icon" href="..images/sol.ico"&gt;
     </p>
 
     <h2>File Paths</h2>
@@ -422,7 +423,7 @@
         <code><strong>&lt;video src="Video/Movie_011.mp4" controls width="400"&gt;Tu navegador no admite el elemento &lt;code&gt;video&lt;/code&gt;.&lt;/video&gt;</strong></code>
     </p>
 
-    <video src="Clase/Video/Movie_011.mp4" controls width="600">
+    <video src="/Video/Movie_011.mp4" controls width="600">
         Tu navegador no admite el elemento <code>video</code>.
     </video>
 
@@ -535,9 +536,9 @@
 
     <h2>Classes</h2>
     <p>
-        Las clases son atributos que se pueden añadir a cualquier etiqueta HTML y ayudan a CSS a identificar dichos elementos y aplicarles estilo. <br>
-        por ejemplo, podemos tener la clase <strong>"destacado"</strong> y aplicarla tanto a un div, un span o un párrafo, después en el archivo .css se definen los estilos <br>
-        para la clase <strong>"destacado"</strong> y estos estilos se aplicarán a todos los elementos que implementen dicha clase. <br>
+        Las s son atributos que se pueden añadir a cualquier etiqueta HTML y ayudan a CSS a identificar dichos elementos y aplicarles estilo. <br>
+        por ejemplo, podemos tener la  <strong>"destacado"</strong> y aplicarla tanto a un div, un span o un párrafo, después en el archivo .css se definen los estilos <br>
+        para la  <strong>"destacado"</strong> y estos estilos se aplicarán a todos los elementos que implementen dicha . <br>
         <br>
         Ejemplo de html:
     </p>
@@ -575,9 +576,9 @@
     <p class="red">Tercer párrafo</p>
 
     <p>
-        La clase funciona como una categoría o grupo que comparte estilos, por ejemplo la clase <strong>"error"</strong> podría definir elementos que son erroress<br>
+        La  funciona como una categoría o grupo que comparte estilos, por ejemplo la  <strong>"error"</strong> podría definir elementos que son erroress<br>
         y por lo tanto comparten estilos como tener un mismo tipo de fuente y texto de color rojo. <br>
-        Por eso es buena práctica usar nombres descriptivos para nombrar a nuestras clases.
+        Por eso es buena práctica usar nombres descriptivos para nombrar a nuestras s.
     </p>
 
     <h2>Quotations</h2>
@@ -658,8 +659,8 @@
 
     <h2 class="primary">Classes</h2>
     <p>
-        Las clases sirven para crear categorías de estilo, estas clases se pueden aplicar a casi cualquier etiqueta de HTML. <br>
-        Se declaran en el archivo CSS con un "." antes del nombre de la clase. Ejemplo:
+        Las s sirven para crear categorías de estilo, estas s se pueden aplicar a casi cualquier etiqueta de HTML. <br>
+        Se declaran en el archivo CSS con un "." antes del nombre de la . Ejemplo:
     </p>
 
     <pre>
@@ -754,5 +755,1261 @@
         Este es un ejemplo de una fuente tomada de google fonts <a href="https://fonts.google.com/selection/embed">parisienne-regular</a>
     </p>
 
+    <section>
+        <h2>Background</h2>
+        <p class="topbanner">
+            Starry sky<br />
+            Twinkle twinkle<br />
+            Starry sky
+        </p>
+        <p class="warning">Here is a paragraph</p>
+    </section>
+
+    <section>
+        <h2>Border</h2>
+        <p class="bordered">This is a bordered paragraph.</p>
+    </section>
+
+    <section>
+        <h2>Sizing</h2>
+        <div class="sized-element">Mostrando el tamaño de los elementos</div>
+    </section>
+
+    <section>
+        <h2>Marging</h2>
+        <div class="margin-box"></div>
+        <div class="margin-box"></div>
+    </section>
+
+    <section>
+        <h2>Padding</h2>
+        <div class="padding-box">
+            <div class="inner-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Box Model</h2>
+        <p>
+            El modelo de caja de CSS es un concepto fundamental que describe cómo se representan los elementos HTML en la página web. <br>
+            Cada elemento se representa como una caja rectangular que consta de cuatro áreas: el contenido, el relleno (padding), el borde (border) y el margen (margin). <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Box_model">El modelo de caja de CSS</a> <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout">Block_and_inline_layout</a>
+        </p>
+        <div style="display: grid; align-items: center; justify-content: center;">
+            <img src="images/box-model.png" alt="Diagrama del modelo de caja de CSS" />
+        </div>
+        
+        <p>
+            Estas propiedades se pueden definir usando las palabras: padding, margin, border para añadir espacio al rededor de los elementos, <br>
+            sin embargo también se puede añadir espacio a un sólo lado añadiendo la palabra left, right, top o bottom después de la propiedad, por ejemplo: padding-left, margin-top etc. <br>
+        </p>
+        <p>
+            Es importante saber que existen dos modelos el estándar y el modelo de caja alternativo, el estándar es el que se usa por defecto y el modelo de caja alternativo se activa usando la propiedad <strong>box-sizing: border-box;</strong> <br>
+            La diferencia es que en el modelo estándar el tamaño total de un elemento se calcula sumando el tamaño del contenido, el relleno, el borde y el margen, mientras que en el modelo de caja alternativo el tamaño total de un elemento se calcula sólo con el tamaño del contenido y el borde, <br>
+            es decir, el relleno y el margen no afectan al tamaño total del elemento lo cuál lo hace más predecible. <br>
+        </p>
+    </section>
+
+    <section>
+        <h2>Box sizing</h2>
+        <p>
+            En el modelo de caja hay dos formas de calcular el tamaño total de un elemento, el modelo de caja estándar y el modelo de caja alternativo. <br>
+            Para cambiar entre modelos se utiliza la propiedad <code><strong>box-sizing</strong>,</code> que puede tomar los siguientes valores: <code><strong>content-box</strong></code> para el modelo de caja estándar y <code><strong>border-box</strong></code> para el modelo de caja alternativo. <br>
+            <ol>
+                <li><code><strong>content-box</strong></code>, es el comportamiento CSS por defecto para el tamaño de la caja (box-sizing). Si se define el ancho de un elemento en 100 pixeles, la caja del contenido del elemento tendrá 100 pixeles de ancho, y el ancho de cualquier borde o relleno ser añadirá al ancho final desplegado.</li>
+                <li><code><strong>border-box</strong></code> le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento. Es decir, si se define un elemento con un ancho de 100 pixeles. Esos 100 pixeles incluíran cualquier borde o relleno que se añadan, y la caja de contenido se encogerá para absorber ese ancho extra. Esto típicamente hace mucho más fácil dimensionar elementos.</li>
+            </ol>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/box-sizing">Box sizing</a>
+        </p>
+
+        <p>Esto es un div rojo de 100px x 100px con relleno de 20 px y borde de 1 px, usando el modelo estándar</p>
+
+        <div class="padding-box">
+            <div class="inner-box"></div>
+        </div>
+
+        <p>Esto es un div rojo de 100px x 100px con relleno de 20 px y borde de 1 px, usando el modelo alternativo</p>
+
+        <div class="padding-alternative-box">
+            <div class="inner-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Display</h2>
+        <p>
+            La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible). <br>
+            Formalmente la propiedad <code><strong>display</strong></code> establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en flow layout; la tipo interna establece el layout(Diseño) de los hijos. <br>
+            Algunos valores de display estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando display: flex es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/display">Display</a>
+        </p>
+        <p>
+            El siguiente es un ejemplo de un span que se muestra en línea por defecto:
+        </p>
+        <p style="color: blue;">
+            Soy un párrafo y este es un <span class="inline-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+        </p>
+        <p>
+            Y este es un span con la propiedad <code><strong>display: inline-block;</strong></code> lo que hace que se comporte como un elemento en línea pero que respete las propiedades de ancho y alto:
+        </p>
+        <p style="color: blue;">
+            Soy un párrafo y este es un <span class="inline-block-span">span</span> dentro de un párrafo. El span es un elemento de línea así que no respeta ancho ni alto.
+        </p>
+        <p>
+            Además de <code><strong>display: inline-block;</strong></code> existen muchas otras que se pueden usar:
+        </p>
+
+        <pre>
+            <code>
+                <strong>
+                / * Valores display-outside * /
+                display: block;
+                display: inline;
+                display: run-in;
+
+                / * Valores display-inside * /
+                display: flow;
+                display: flow-root;
+                display: table;
+                display: flex;
+                display: grid;
+                display: ruby;
+                display: subgrid;
+
+                / * Valores display-outside>más valores display-inside * /
+                display: block flow;
+                display: inline table;
+                display: flex run-in;
+
+                / * Valores display-listitem * /
+                display: list-item;
+                display: list-item block;
+                display: list-item inline;
+                display: list-item flow;
+                display: list-item flow-root;
+                display: list-item block flow;
+                display: list-item block flow-root;
+                display: flow list-item block;
+
+                / * Valores display-internal * /
+                display: table-row-group;
+                display: table-header-group;
+                display: table-footer-group;
+                display: table-row;
+                display: table-cell;
+                display: table-column-group;
+                display: table-column;
+                display: table-caption;
+                display: ruby-base;
+                display: ruby-text;
+                display: ruby-base-container;
+                display: ruby-text-container;
+
+                / * Valores display-box * /
+                display: contents;
+                display: none;
+
+                / * Valores display-legacy * /
+                display: inline-block;
+                display: inline-table;
+                display: inline-flex;
+                display: inline-grid;
+
+                / * Valores globales * /
+                display: heredar;
+                display: initial;
+                display: unset;
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Overflow</h2>
+        <p>
+            La propiedad CSS <code><strong>overflow</strong></code> especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque. <br>
+            En pocas palabras, esta propiedad controla lo que sucede con el contenido que se desborda del área de un elemento. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/overflow">Overflow</a>
+            Ejemplos:
+        </p>
+        <div class="overflow-hidden-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: hidden;</strong></code> lo que hace que el contenido que se desborda no se muestre.
+            </p>
+        </div>
+        <div class="overflow-scroll-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: scroll;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento.
+            </p>
+        </div>
+        <div class="overflow-auto-box">
+            <p>
+                Este es un ejemplo de un elemento con contenido que se desborda, el cual tiene la propiedad <code><strong>overflow: auto;</strong></code> lo que hace que el contenido que se desborda se muestre con barras de desplazamiento sólo si es necesario.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Position</h2>
+        <p>
+            La propiedad CSS <code><strong>position</strong></code> especifica el tipo de posicionamiento de un elemento. <br>
+            Esta propiedad es muy importante porque controla cómo se posicionan los elementos en la página web, y es fundamental para crear diseños complejos. <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/position">Position</a>:
+        </p>
+        <ul>
+            <li><code><strong>static</strong></code>: Es el valor por defecto, los elementos se posicionan de acuerdo al flujo normal del documento.</li>
+            <li><code><strong>relative</strong></code>: El elemento se posiciona de acuerdo al flujo normal del documento, pero luego se desplaza respecto a su posición original utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>absolute</strong></code>: El elemento se posiciona respecto a su primer ancestro posicionado (que no sea static), o respecto al viewport si no hay ningún ancestro posicionado. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>fixed</strong></code>: El elemento se posiciona respecto al viewport, lo que significa que siempre estará en la misma posición incluso cuando se haga scroll. Se puede desplazar utilizando las propiedades top, right, bottom y left.</li>
+            <li><code><strong>sticky</strong></code>: El elemento se comporta como relative hasta que su contenedor alcance un punto específico en el viewport, momento en el cual se comporta como fixed.</li>
+        </ul>
+
+        <p>
+            <code><strong>position: static;</strong></code>
+        </p>
+        <div class="position-container">
+            <div class="static-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: relative;</strong></code>
+            (Solo se mueve respecto a su posición original, pero sigue ocupando el mismo espacio en el flujo del documento)
+        </p>
+        <div class="position-container">
+            <div class="relative-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: sticky;</strong></code>
+        </p>
+        <div class="position-container">
+            <div class="sticky-child-box"></div>
+        </div>
+
+        <p>
+            <code><strong>position: fixed;</strong></code>
+        </p>
+        <div class="position-fixed-child-box">
+            <span>Este es un elemento con position: fixed;</span>
+        </div>
+        <p>
+            Este elemento ya está en la parte superior de la página, así que si haces scroll hacia abajo, el elemento se mantendrá en la misma posición. <br>
+        </p>
+
+        <p>
+            <code><strong>position: absolute;</strong></code>
+            (Se posiciona respecto a su primer ancestro posicionado (En este caso el contendor tiene position: relative;), o respecto al viewport si no hay ningún ancestro posicionado, y no ocupa espacio en el flujo del documento) Mal usado se puede ver encimado sobre otros elementos.
+        </p>
+        <div class="position-container">
+            <div class="absolute-child-box"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Selectors</h2>
+        <p>
+            Los selectores son un concepto de CSS que nos permite añadir los mismos estilos a múltiples elementos del mismo tipo, por ejemplo, un estilo para todos los h2, los p, los spans etc. También se pueden utilizar las s añadiendo un ".", un "#" para un ID o por medio de atributos, <br>
+            añadir estilos a todas las anclas que tengan un valor específico <code><strong>a[href="https://example.com"]</strong></code> <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Selectors</a>
+        </p>
+
+        <pre id="codigo-id">
+            <code>
+                <strong>
+
+                    Selectores
+                    h1 {
+                    color: blue;
+                    }
+
+                    Se pueden combinar selectores, por ejemplo, todos los spans dentro de un párrafo
+                    p span {
+                    color: blue;
+                    }
+
+                    s
+                    .box {
+                    }
+
+                    Ids
+                    #unique {
+                    }
+
+                    Selectores con atributo
+                    a[href="https://example.com"] {
+                    }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Pseudos o pseudoelementos</h2>
+        <p>
+            Este grupo de selectores incluye pseudos, que aplican estilo a ciertos estados de un elemento. La pseudo <code><strong>:hover</strong></code>, por ejemplo, aplica estilo a un elemento solo cuando se le pasa el ratón por encima. <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors">Pseudo-s</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .hover-example:hover {
+                        color:blueviolet;
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p class="hover-example">
+            Este es un ejemplo de <code><strong>hover-example: hover</strong></code>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Esto sólo le aplica estilo a la primera línea
+                    .first-line-example::first-line {
+                        color:blueviolet;
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p class="first-line-example">
+            Primera línea <br>
+            Segunda línea
+        </p>
+    </section>
+
+    <section>
+        <h2>Combinators</h2>
+        <p>
+            Los combinadores son selectores que ayudan a delimitar elementos del documento, en este ejemplo sólo se aplican estilos a los párrafos que son hijos de los artículos.
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    article > p {
+                    }
+                </strong>
+            </code>
+        </pre>
+        <article>
+            <p>
+                Este es un párrafo dentro de un artículo
+            </p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Inheritance</h2>
+        <p>
+            La herencia se refiere a cuando un elemento hijo adopta las propiedades del padre, por ejemplo:
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascade/Inheritance">Herencia</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    body {
+                        color: black; /*Este color se aplica a todos los elementos hijos (h1, p, span etc.)*/
+                    }
+                </strong>
+            </code>
+        </pre>
+        <p>
+            También existen las propiedades no heredadas como por ejemplo <code><strong>border</strong></code>.
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    p { border: medium solid }
+                    &lt;p&gt;Este párrafo tiene &lt;em&gt;texto enfatizado&lt;/em&gt; en su interior.&lt;/p&gt;
+                </strong>
+            </code>
+        </pre>
+        <p id="no-heredable">Este párrafo tiene <em>texto enfatizado</em> en su interior.</p>
+
+        <div class="inheritance-container">
+            <div class="inheritance-child"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Variables</h2>
+        <p>
+            Las variables son propiedades personalizadas, el problema que resuelven es que con ellas no es necesario repetir código por todo el archivo CSS, además permite identificar valores usando semántica para saber para qué deben de ser usados, por ejemplo: <br>
+            El color primario del sitio es el #00ff00, para no tener que repetir ese color en todos los selectores y s del archivo CSS se puede guardar en una variable que se llame por ejemplo <code><strong>--main-color</strong></code> de esa manera <code><strong>--main-color</strong></code> se puede usar en todo el documento y si llega a ser <br>
+            necesario un cambio de color, sólo hay que hacer la modificación en el valor de la variable y no en todos los lugares donde se implementa.
+            <br>
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties">Variables</a>
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Así es cómo se define una variable en CSS (se escriben "--" antes de nombrarla)
+                    elemento {
+                        --main-bg-color: brown;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            El selector que usemos para las reglas de estilo define el ámbito (scope) en el que podremos usar la propiedad personalizada (variable). Una buena práctica común es declarar variables en la pseudo- <code><strong>:root</strong></code>, y así aplicarlas globalmente al documento HTML. <br>
+            Aunque no tiene por qué ser siempre así también se puede delimitar los elementos a los que se les van a aplicar los estilos.
+        </p>
+
+        <pre>
+            <code>
+                <strong>
+                    :root {
+                        --main-bg-color: brown;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <pre>
+            <code>
+                <strong>
+                    Así es cómo se utiliza la variable
+                    elemento {
+                        background-color: var(--main-bg-color);
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            Nota: Las propiedades personalizadas heredan. Lo que significa que si no se establece ningún valor para una propiedad personalizada en un elemento dado, se utiliza el valor de su elemento padre.
+        </p>
+
+        <h3>Fallback</h3>
+        <p>
+            En caso de que el valor de una variable aún no esté declarado o sea inválido por la razón que sea siempre es buena idea tener un plan b, a eso se le llama fallback y funciona de la siguiente manera:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .dos {
+                        color: var(--my-var, red); /* Rojo (red) si --my-var no esta definida */
+                    }
+
+                    Si queremos un plan c se puede usar como fallback otra variable que a su vez tiene su propio fallback 
+                    (no hay que abusar para no causar problemas de rendimiento)
+                    .tres {
+                        background-color: var(
+                            --my-var,
+                            var(--my-background, pink)
+                        ); /* Rosa (pink) si my-var y --my-background no están definidas */
+                    }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Flexbox</h2>
+        <p>
+            Flexbox es un método de diseño de página unidimensional para compaginar elementos en filas o columnas. Los elementos de contenido se ensanchan para rellenar el espacio adicional y se encogen para caber en espacios más pequeños. <br>
+            Es muy útil cuando se quiere hacer cosas como:
+            <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Flexbox">Flexbox documentation</a>
+            <a href="https://www.youtube.com/watch?v=QFXSgGg-HWo">Flexbox en 15 min</a>
+            <ul>
+                <li>Centrar verticalmente un bloque de contenido dentro de su elemento padre.</li>
+                <li>Hacer que todos los elementos secundarios de un contenedor ocupen una cantidad igual del ancho/alto disponible, independientemente del ancho/alto que haya disponible.</li>
+                <li>Hacer que todas las columnas en una compaginación en columnas múltiples adopten la misma altura incluso si contienen cantidades diferentes de contenido.</li>
+            </ul>
+            Lo primero que se debe de hacer es añadir la propiedad <code><strong>display: flex;</strong></code> al elemento padre de los elementos que queremos ordenar. <br>
+            Esto hace que ese elemento se convierta en un contenedor flex y sus hijos en elementos flexibles.
+            Por ejemplo, una <strong>sección</strong> que contiene varios <strong>artículos</strong>:
+            <pre>
+                <code>
+                    <strong>
+                        section {
+                            display: flex;
+                        }
+                    </strong>
+                </code>
+            </pre>
+            Nota: al hacer esto el contenedor pasa a comportarse como un elemento en bloque mientras que sus hijos son flexibles. Para hacer que el padre se comporte como elemento en línea se puede
+            usar <code><strong>display: inline-flex;</strong></code> <br>
+        </p>
+
+        <section class="section-flex-example">
+            <article class="article-flex-example">Article 1</article>
+            <article class="article-flex-example">Article 2</article>
+            <article class="article-flex-example">Article 3</article>
+        </section>
+
+        <p>
+            En el modelo flexible existen dos ejes, <strong>main axis</strong> y <strong>cross axis</strong>: <br>
+        </p>
+        <img src="images/flex_terms.png" alt="flex axis">
+        
+        <p>
+            El siguiente concepto que hay que entender es la dirección de los elementos hijos. La propiedad <code><strong>flex-direction</strong></code> por defecto tiene un valor <code><strong>row</strong></code>
+            lo que significa que los elementos se posicionan en fila de izquierda a derecha según el idioma que esté configurado en el navegador, esto significa que el eje main va de izquierda a derecha y el cross de 
+            arriba a bajo, si lo que queremos es posicionar los elementos en columna hay que modificar el valor de la propiedad a <code><strong>column</strong></code> para que los elementos se posicionen en columna, 
+            esto mueve el eje main que ahora corre de arriba a abajo y el eje cross cruza horizontalmente.
+        </p>
+
+        <pre>
+                <code>
+                    <strong>
+                        section {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    </strong>
+                </code>
+            </pre>
+
+        <section class="section-flex-example" style="flex-direction: column;">
+            <article class="article-flex-example">Article 1</article>
+            <article class="article-flex-example">Article 2</article>
+            <article class="article-flex-example">Article 3</article>
+        </section>
+
+        <p>
+            Los ejes de flex se intercambian dependiendo de flex-direction <br>
+            flex-direction: row ------> main axis horizontal <br>
+            flex-direction: column ------> main axis vertical <br>
+            <br>
+            main axis -> justify-content <br>
+            cross axis -> align-items
+        </p>
+
+        <p>
+            Ejemplo de alineación de elementos:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    .flex-align-container {
+                        height: 100px;
+                        border: 1px solid black;
+                        background-color: aquamarine;
+
+                        display: flex;
+                        align-items: center; /*Alinea los elementos en el eje cross*/
+                        justify-content: space-around; /*Añade espacio en el eje main*/
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <div class="flex-align-container">
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+        </div>
+
+        <p>
+            Además es posible cambiar la dirección de los elementos con <code><strong>flex-direction: row-reverse;</strong></code>, añadir un salto de línea con <code><strong>flex-wrap: wrap;</strong></code> para los elementos que ya no quepan en el contenedor,
+            añadir proporciones con <code><strong>flex: 1; flex: 2</strong></code> (en este caso los elementos con flex: 2 ocuparían el doble de espacio que los primeros elementos y así sucesivamente). Flexbox incluso permite cambiar el 
+            orden de los elementos sin necesidad de modificar el HTML, cosa que de otra forma sería imposible.
+        </p>
+
+        <div class="flex-doc-example">
+            <header>
+                <h1>Sample flexbox example</h1>
+            </header>
+
+            <section>
+                <article>
+                <h2>First article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Second article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Third article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Fourth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Fifth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Sixth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Seventh article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Eighth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Ninth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+
+                <article>
+                <h2>Tenth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Eleventh article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+                </article>
+
+                <article>
+                <h2>Twelfth article</h2>
+
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <section>
+        <h2>Grid</h2>
+        <p>
+            Al igual que las tablas, el grid layout permite a un autor alinear elementos en columnas y filas. Sin embargo, con CSS grid son posibles muchos más diseños y de forma más sencilla que con las tablas.
+            Por ejemplo, los elementos secundarios de un contenedor de cuadrícula podrían posicionarse para que se solapen y se superpongan, de forma similar a los elementos posicionados en CSS.
+            <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Grid_layout">Grid documentation</a>
+            <a href="https://www.youtube.com/watch?v=-kgGATnsPbs">CSS Grid en 15 min</a>
+            <a href="https://www.youtube.com/watch?v=JYfiaSKeYhE&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=3">Curso CSS Grid: ¡El único tutorial de cuadrícula que necesitarás!</a>
+        </p>
+
+        <div class="wrapper">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+            <div class="six">Six</div>
+        </div>
+
+        <p>
+            Estos son llamados "Bento Grids" que son distribuciones en las que algunos elementos abarcan más de una fila o columna para crear sitios más interesantes. Se parecen mucho a un plato de comida china. <br>
+            Para crear un grid se debe añadir la siguiente propiedad al contenedor de los elementos <code><strong>display: grid; o display: inline-grid</strong></code>
+            <a href="https://www.youtube.com/watch?v=JYfiaSKeYhE&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=2">CSS Grid Course</a>
+        </p>
+
+        <div class="grid-image-container">
+            <img src="images/Comida china.png" alt="Comida china">
+            <img src="images/Bento grid1.png" alt="Bento grid 1">
+            <img src="images/Bento grid2.png" alt="Bento grid 2">
+        </div>
+
+        <p>
+            Algunos de los conceptos más útiles de CSS Grid son los siguientes:
+            <ul>
+                <li><code><strong>grid-template-colums</strong></code> permite definir cuántas columntas y de qué medida habrá en la cuadrícula.</li>
+                <li><code><strong>grid-template-rows</strong></code> permite definir cuántas filas y de qué tamaño habrá en la cuadrícula.</li>
+                <li><code><strong>grid-template-areas</strong></code> permite definir cuántas columnas o filas abarcará un mismo elemento.</li>
+                <li><code><strong>repeat()</strong></code> es una función que permite repetir las columnas o filas con menos código.</li>
+                <li><code><strong>fr</strong></code> es una medida que representa cantidad de fracciones que debe de abarcar un elemento en alto o ancho.</li>
+                <li><code><strong>grid-auto-rows y grid-auto-columns.</strong></code> automatizan grid-template-colums y grid-template-rows para que la cuadrícula genere 
+                    la cantidad de filas o columnas que crea necesarias usando la misma medida.</li>
+                <li><code><strong>minmax()</strong></code> es una función que ayuda a definir una medida mínima y máxima para los elementos de modo que puedan adaptar su tamaño al espacio disponible en la pantalla.
+                Una combinación útil es minmax(100px, auto) para que el elemento no se pueda achicar demasiado pero si expandirse según se requiera.</li>
+                <li><code><strong>grid-column-start, grid-column-end, grid-row-start, grid-row-end</strong></code> sirven para decirle a un elemento en qué linea de la cuadrícula debe comenzar y terminar.</li>
+                <li><code><strong>grid-column-gap, grid-row-gap, grid-gap</strong></code> se utilizan para crear espacio entre las celdas de la cuadrícula para que los elementos no queden pegados unos con otros.</li>
+                <li>Dentro de una misma celda se pueden poner varios elementos uno sobre otro usando <code><strong>z-index</strong></code>, por ejemplo, para poner un texto con una imagen o video de fondo.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section>
+        <h2>Flexbox vs Grid</h2>
+        <p>
+            Tanto Flexbox como Grid nos ayudan a crear layouts responsivos, así qué ¿Cuándo sabemos cuál deberíamos usar?
+            <a href="https://www.youtube.com/watch?v=aEj6k-gi9-s&list=TLPQMDgwNjIwMjaK7JIB5XTh3Q&index=1">Flexbox vs Grid</a>
+            <ul>
+                <li><strong>Flexbox</strong> se enfoca más en los elementos hijos, haciendo que normalmente haya que añadirle reglas especiales a cada uno.</li>
+                <li><strong>Grid</strong> se enfoca más en el contenedor padre, trata de definir la estructura todo en uno.</li>
+            </ul>
+            Cuando no estemos seguros de cuál usar hay que preguntarnos ¿Qué es más importante? ¿Una distribución uniforme enfocada en el padre? Hay que elegir Grid ¿O una distribución flexible en la 
+            que los hijos puedan sobreponerse a la distribución del padre? Entonces sería mejor elegir Flexbox. <br>
+        </p>
+
+        <h3>Flexbox</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="flex-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
+
+        <h3>Grid</h3>
+        <p>
+            (Achicar y agrandar la pantalla con las herramientas de desarrollador para ver el efecto)
+        </p>
+        <div class="grid-container">
+            <div class="flex-card">Nuevo</div>
+            <div class="flex-card">Nuevo elemento</div>
+            <div class="flex-card">Próximente</div>
+            <div class="flex-card">Ejemplo</div>
+            <div class="flex-card">Tarjeta flexbox</div>
+            <div class="flex-card">Elemento de prueba</div>
+            <div class="flex-card">Este es un div</div>
+            <div class="flex-card">Nuevo div</div>
+            <div class="flex-card">Nuevo prueba</div>
+            <div class="flex-card">Nuevo</div>
+        </div>
+    </section>
+
+        <section>
+        <h2>Floats</h2>
+
+        <p>
+            La propiedad <code><strong>float</strong></code> fue introducida para permitir a los desarrolladores implementar diseños sencillos que incluyeran una imagen flotando dentro de una columna de texto, con el texto envolviendo la parte izquierda o derecha de la imagen. El tipo de cosa que encuentras habitualmente en el diseño de un periódico.
+        </p>
+
+        <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Floats">Floats</a>
+
+        <h3>Ejemplo simple de caja flotante</h3>
+
+        <div class="float-container">
+            <div class="float-box">Caja flotante</div>
+            <p class="float-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+                dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+                ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+                laoreet sit amet.
+            </p>
+
+            <p class="float-text">
+                Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+                orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+                ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+                ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+                ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+                a urna. Ut id ornare felis, eget fermentum sapien.
+            </p>
+
+            <p class="float-text">
+                Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+                ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+                est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+                tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+                sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+                vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+        </div>
+        
+        <p>
+            Hoy en día existen técnicas más modernas y mejores pero aún así vale la pena conocer este tema. <br>
+            La manera en como funciona es que el elemento con la propiedad <code><strong>float</strong></code> sale del flujo normal del documento y todo el contenido que esté 
+            por debajo ahora lo envolverá.
+        </p>
+
+        <p>
+            Nota: la propiedad <code><strong>clear</strong></code> limpia los elementos flotados al rededor del flotador, los valores pueden ser 
+            <code><strong>left, rigth, both</strong></code>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Cursor</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/cursor">Cursor</a>
+        <p>
+            La propiedad CSS:cursor especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
+        </p>
+        <span style="cursor: crosshair">Este es un ejemplo con <code><strong>cursor: crosshair;</strong></code></span>
+    </section>
+
+    <section>
+        <h2>Transition</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Guides/Transitions/Using">Transitions</a>
+        <p>
+            Las transiciones son cambios de un valor a otro de manera suave, por ejemplo, el cambio de color de un elemento de blanco a negro en 1 segundo para que no
+            se sienta un salto bruzco. Para hacer uso de las transiciones primero hay que especificar qué propiedades van a ser afectadas usando <code><strong>transition-property</strong></code>
+            luego definiendo la duración con <code><strong>transition-duration</strong></code> y opcionalmente añadiendo un delay <code><strong>transition-delay</strong></code>. <br>
+            Por ejemplo:
+        </p>
+        <ul>
+            <li id="long1">Transición larga, gradual...</li>
+            <li id="fast1">Transición muy rápida...</li>
+            <li id="delay1">Transición larga de un minuto de retraso...</li>
+            <li id="easeout">Usar intervalos de alejamiento...</li>
+            <li id="linear">Usar intervalos lineales...</li>
+            <li id="cubic1">Usar cúbica bézier(0.2, 0.4, 0.7, 0.8)...</li>
+        </ul>
+
+        <pre>
+            <code>
+                <strong>
+                    Este es el código CSS
+
+                    #long1 {
+                        font-size: 14px;
+                        transition: font-size 5s;
+                    }
+
+                    #long1:hover {
+                        font-size: 36px;
+                    }
+
+                    #fast1 {
+                        font-size: 14px;
+                        transition: font-size 0.5s;
+                    }
+
+                    #fast1:hover {
+                        font-size: 36px;
+                    }
+
+                    #delay1 {
+                        font-size: 14px;
+                        transition: font-size 4s 2s; /* duración 4s, retraso 2s */
+                    }
+
+                    #delay1:hover {
+                        font-size: 36px;
+                    }
+
+                    #easeout {
+                        font-size: 14px;
+                        transition: font-size 3s ease-out;
+                    }
+
+                    #easeout:hover {
+                        font-size: 36px;
+                    }
+
+                    #linear {
+                        font-size: 14px;
+                        transition: font-size 3s linear;
+                    }
+
+                    #linear:hover {
+                        font-size: 36px;
+                    }
+
+                    #cubic1 {
+                        font-size: 14px;
+                        transition: font-size 3s cubic-bezier(0.2, 0.4, 0.7, 0.8);
+                    }
+
+                    #cubic1:hover {
+                        font-size: 36px;
+                    }
+                </strong>
+            </code>
+        </pre>
+
+        <p>
+            Este es un ejemplo habitual con botones.
+        </p>
+
+        <div class="sidebar">
+            <p><a class="menuButton" href="home">Inicio</a></p>
+            <p><a class="menuButton" href="about">Acerca de</a></p>
+            <p><a class="menuButton" href="contact">Contacto Us</a></p>
+            <p><a class="menuButton" href="links">Vínculos</a></p>
+        </div>
+
+        <pre>
+            <code>
+                <strong>
+                    Este es el código CSS
+
+                    .menuButton {
+                        position: relative;
+                        -moz-transition-property: background-color, color;
+                        -moz-transition-duration: 1s;
+                        -moz-transition-timing-function: ease-out;
+                        -webkit-transition-property: background-color, color;
+                        -webkit-transition-duration: 1s;
+                        -o-transition-property: background-color, color;
+                        -o-transition-duration: 1s;
+                        text-align: left;
+                        background-color: grey;
+                        left: 5px;
+                        top: 5px;
+                        height: 26px;
+                        color: white;
+                        border-color: black;
+                        font-family: sans-serif;
+                        font-size: 20px;
+                        text-decoration: none;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        padding: 2px 4px;
+                        border: solid 1px black;
+                        }
+
+                        .menuButton:hover {
+                        position: relative;
+                        -moz-transition-property: background-color, color;
+                        -moz-transition-duration: 1s;
+                        -moz-transition-timing-function: ease-out;
+                        -webkit-transition-property: background-color, color;
+                        -webkit-transition-duration: 1s;
+                        -o-transition-property: background-color, color;
+                        -o-transition-duration: 1s;
+                        background-color:white;
+                        color:black;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        }
+
+                        .sidebar {
+                        position:absolute;
+                        width: 150px;
+                        height: 170px;
+                        background-color: #eeeeff;
+                        color: black;
+                        border: solid 1px black;
+                        -moz-box-shadow: 2px 2px 1px black;
+                        }
+                </strong>
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Transform functions</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/transform">Transforms</a>
+        <p>
+            La propiedad CSS transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
+        </p>
+        <p>
+            <code><strong>transform: matrix(2, 1, 1, 1, 1, 1);</strong></code><br>
+            Aplica una transformación usando una matriz. Es la forma más avanzada de
+            transformar un elemento porque combina escalado, inclinación y traslación
+            en una sola instrucción. Los primeros cuatro valores controlan la forma y
+            tamaño del elemento, mientras que los dos últimos lo desplazan en los ejes X e Y.
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: matrix(2, 1, 1, 1, 1, 1);">
+
+        <p>
+            <code><strong>transform: translate(120px, 10%);</strong></code><br>
+            Mueve el elemento sin cambiar su tamaño ni su forma. En este caso se
+            desplaza 120 píxeles hacia la derecha y un 10% hacia abajo respecto a su
+            posición original.
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: translate(120px, 10%);">
+
+        <p>
+            <code><strong>transform: scale(2, 0.5);</strong></code><br>
+            Cambia el tamaño del elemento. El valor 2 duplica su ancho y el valor 0.5
+            reduce su altura a la mitad.
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: scale(2, 0.5);">
+
+        <p>
+            <code><strong>transform: rotate(0.5turn);</strong></code><br>
+            Rota el elemento. La unidad <code>turn</code> representa una vuelta
+            completa, por lo que <code>0.5turn</code> equivale a media vuelta
+            (180 grados).
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: rotate(0.5turn);">
+
+        <p>
+            <code><strong>transform: skew(30deg, 20deg);</strong></code><br>
+            Inclina el elemento. El primer valor inclina 30 grados sobre el eje X y el
+            segundo valor 20 grados sobre el eje Y, produciendo un efecto similar a
+            empujar los lados de una figura.
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: skew(30deg, 20deg);">
+
+        <p>
+            <code><strong>transform: scale(0.5) translate(100%, 100%);</strong></code><br>
+            Combina varias transformaciones. Primero reduce el elemento al 50% de su
+            tamaño original y después lo desplaza un 100% de su propio ancho hacia la
+            derecha y un 100% de su propia altura hacia abajo.
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="transform: scale(0.5) translate(100%, 100%);">
+    </section>
+
+    <section>
+        <h2>Animation</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/animation">Animations</a>
+        <p>
+            La diferencia entre una transición y una animación es que la transición sólo interpola entre dos valores, por ejemplo, cambiar el tamaño de una fuente de 12px a 24px en un segundo.
+            pero las animaciones permiten definir varios estados mediante keyframes, por ejemplo:
+        </p>
+        <pre>
+            <code>
+                <strong>
+                    Se define el nombre de la animación, en este caso "crecer"
+                    @keyframes crecer {
+                    
+                    Al inicio el objeto que tenga la animación inicia en su tamaño normal
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    A la mitad de la animación crece 150%
+                    50% {
+                        transform: scale(1.5);
+                    }
+
+                    Al final de la animación regresa a su tamaño normal
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+
+                En este caso se le aplica la animación a las imagenes, en este caso tomará 2 segundos y se repite indefinidamente
+                img {
+                    animation: crecer 2s infinite;
+                }
+                </strong>
+            </code>
+        </pre>
+        <p>
+            Este es el resultado:
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox" class="animation-img">
+
+        <div>
+            <p>
+                <strong>Usa <code>transition</code></strong> cuando quieras suavizar cambios de estado:
+            </p>
+            <ul>
+                <li><code>:hover</code></li>
+                <li><code>:focus</code></li>
+                <li>Abrir/cerrar menús</li>
+                <li>Botones</li>
+                <li>Tarjetas</li>
+            </ul>
+
+            <p>
+                <strong>Usa <code>animation</code></strong> cuando quieras crear movimiento o secuencias:
+            </p>
+            <ul>
+                <li>Loaders</li>
+                <li>Spinners</li>
+                <li>Rebotes</li>
+                <li>Desplazamientos</li>
+                <li>Efectos decorativos</li>
+                <li>Elementos que se mueven continuamente</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Filter Functions</h2>
+        <a href="https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/filter">Filter Functions</a>
+        <p>
+            La propiedad filter de CSS aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes. <br>
+            Varias funciones, como blur() y contrast(), están disponibles para ayudarte a lograr efectos predefinidos.
+        </p>
+
+        <p>
+            <code><strong>filter: blur(5px);</strong></code><br>
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: blur(5px);">
+
+        <p>
+            <code><strong>filter: contrast(200%);</strong></code><br>
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: contrast(200%);">
+
+        <p>
+            <code><strong>filter: grayscale(80%);</strong></code><br>
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: grayscale(80%);">
+
+        <p>
+            <code><strong>filter: hue-rotate(90deg);</strong></code><br>
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: hue-rotate(90deg);">
+
+        <p>
+            <code><strong>filter: drop-shadow(16px 16px 20px red) invert(75%);</strong></code><br>
+        </p>
+        <img src="images/firefox-icon.png" alt="Logo de firefox"
+            style="filter: drop-shadow(16px 16px 20px red) invert(75%)">
+    </section>
+
+    <section>
+        <h2>Math Functions</h2>
+        <p>
+            CSS moderno incluye varias funciones matemáticas que permiten hacer cálculos directamente en las hojas de estilo sin necesidad de JavaScript.
+        </p>
+        <ul>
+            <li><code><strong>calc()</strong></code>Es la más utilizada. Permite sumar, restar, multiplicar y dividir valores. Ejemplo: <code><strong>width: calc(100% - 40px);</strong></code>
+            Si el contenedor padre mide 800px, 800px - 40px = 760px. También se pueden mezclar unidades. Ejemplo <code><strong>font-size: calc(1rem + 1vw);</strong></code></li>
+            <li><code><strong>min()</strong></code>Toma el valor más pequeño de una lista <code><strong>width: min(600px, 90%);</strong></code>significa que usa 600px si el 90% es mayor que 600px o usa el 90% si es menor que 600px.</li>
+            <li><code><strong>max()</strong></code>Toma el valor más grande: <code><strong>width: max(300px, 50%);</strong></code> garantiza que el valor nunca es menor a 300px</li>
+            <li><code><strong>clamp()</strong></code>Una de las más utilizadas actualmente, la sintaxis es: <code><strong>clamp(mínimo, ideal, máximo)</strong></code> ejemplo: <code><strong>font-size: clamp(1rem, 4vw, 3rem);</strong></code> significa que nunca es menor de <code><strong>1rem</strong></code>
+            intenta usar <code><strong>4vw</strong></code> y nunca es más de <code><strong>3rem</strong></code></li>
+        </ul>
+        <p>
+            CSS moderno también soporta funciones trigonométricas como:
+        </p>
+        <ul>
+            <li><code><strong>sin()</strong></code></li>
+            <li><code><strong>cos()</strong></code></li>
+            <li><code><strong>tan()</strong></code></li>
+            <li><code><strong>asin()</strong></code></li>
+            <li><code><strong>acos()</strong></code></li>
+            <li><code><strong>atan()</strong></code></li>
+            <li><code><strong>atan2()</strong></code></li>
+        </ul>
+        <p>
+            Ejemplo: <code><strong>transform: translateX(calc(cos(45deg) * 100px));</strong></code> Son especialmente útiles para animaciones y posicionamiento avanzado.
+        </p>
+        <p>
+            También existen:
+        </p>
+        <ul>
+            <li><code><strong>pow()</strong></code></li>
+            <li><code><strong>sqrt()</strong></code></li>
+            <li><code><strong>exp()</strong></code></li>
+            <li><code><strong>log()</strong></code></li>
+            <li><code><strong>pi</strong></code></li>
+            <li><code><strong>e</strong></code></li>
+            <li><code><strong>infinity</strong></code></li>
+            <li><code><strong>NaN</strong></code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Sass</h2>
+        <a href="https://www.youtube.com/watch?v=BtiiM3jeb_c">Aprende Sass en 15 min</a>
+        <a href="https://desarrolladoresweb.org/sass/que-es-sass-y-para-que-sirve/">Sass: Qué es, Cómo Funciona y Guía Completa para Dominar el Preprocesador CSS</a>
+        <p>
+            Sass es un preprocesador de CSS lo que quiere decir que permite añadir variables y funciones como en un lenjuaje de programación.
+        </p>
+        <ol>
+            <li>Hay que instalar <a href="https://nodejs.org/es">Node</a></li>
+            <li>Hay que instalar <a href="https://sass-lang.com/install/">Sass</a> desde su página oficial o directamente corriendo el comando <code><strong>npm install -g sass</strong></code>después de haber hecho el paso 1</li>
+            <li>Si se usa VSCode también es muy recomendable instalar la extensión de Sass</li>
+            <li>Creamos un archivo de estilos nuevo sobre la raíz del proyecto con extensión <code><strong>.scss</strong></code> en mi caso se llama sassStyles.scss para que no compita de momento con el otro archivo styles.css que ya tengo en el proyecto.</li>
+            <li>Compilar el código de Sass usando el comando <code><strong>sass --watch sassStyles.scss sassStyles.css</strong></code> el primer archivo después del comando watch es el de entrada y el segundo el de salida, ese es el que vinculo al HTML.</li>
+        </ol>
+
+        <p>
+            Nota: el archivo <code><strong>.scss</strong></code> no se puede vincular directamente al archivo html sino que hay que generar un archivo <code><strong>.scss</strong></code> y vincular ese.
+        </p>
+
+        <h3>Ejemplo de uso de Sass</h3>
+
+        <div class="sass-div">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <div class="sass-div">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <div class="sass-div-2">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <div class="sass-div-2">
+            <h4>Encabezado</h4>
+            <p>Este es un párrafo de ejemplo dentro de un div</p>
+        </div>
+
+        <pre>
+            <code>
+                <strong>
+                    Así quedó el código:
+
+                    @use 'anidacion';
+
+                    // Los comentarios ya se pueden poner con "//"
+
+                    // Variables
+                    $main-color: rgb(234, 113, 113);
+                    $text-color: green;
+
+                    // Mixins (Es algo muy parecido a las funciones de los lenguajes de programación)
+                    // Importante: el mixin se debe declarar antes de usarlo (debe de estar arriba del selector que lo implementa)
+                    @mixin caja_personalizada($fondo: white, $color: $text-color) {
+                        background-color: $fondo;
+                        border: 4px solid black;
+                        box-shadow: 0px 0px 2px black;
+                        color: $color;
+                        margin: 20px;
+                    }
+
+                    .sass-div {
+                        @include caja_personalizada();
+                    }
+
+                    .sass-div-2 {
+                        @include caja_personalizada($fondo: grey, $color: red);
+                    }
+
+                    // Operadores
+                    .sass-div-2 {
+                        width: 400px - 100px; // Ya no es necesario usar la función calc()
+                    }
+
+                    Y en otro archivo llamado _anidacion.scss
+                    // Anidación
+                    .sass-div {
+                        h4 {
+                            color: blueviolet;
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        p {
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            text-decoration: underline;
+                        }
+                    }
+                </strong>
+            </code>
+        </pre>
+
+    </section>
 </body>
 </html>

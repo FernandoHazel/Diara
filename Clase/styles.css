@@ -4,29 +4,29 @@
 
 body {
     background-color: lightgray;
-    color: red; /*Este color se aplica a todos los elementos hijos*/
+    color: black; /*Este color se aplica a todos los elementos hijos*/
+    text-align: justify;
+    font-family: Arial;
 }
 
 p {
     color: blue; /*Aquí se sobreescribe el color de los párrafos*/
     font-size: 16px;
-    text-align: center;
+    justify-content: start;
 }
 
 h1 {
   background-color: rgb(197, 93, 161);
   text-align: center;
-  color: black;
 }
 
 h2 {
     background-color: rgb(233, 147, 203);
     text-align: center;
-    color: black;
 }
 
-/* Clases */
-/* Podríamos añadir la clase Nota */
+/* s */
+/* Podríamos añadir la  Nota */
 .error {
     color: red;
     text-decoration: underline;
@@ -133,4 +133,577 @@ y su altura también es 50% de los pixeles de la altura de su contenedor) */
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+/* Background */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/background */
+
+/* Usando <background-color> */
+/*background: green;*/
+
+/* Usando <bg-image> y <repeat-style> */
+/*background: url("test.jpg") repeat-y;*/
+
+/* Usando <box> and <background-color> */
+/*background: border-box red;*/
+
+/* Una sola imagen, centrada y escalada */
+/*background: no-repeat center/80% url("../img/image.png");*/
+
+.warning {
+  background: red;
+}
+
+.topbanner {
+  background: url("star-solid.gif") #00d repeat-y fixed; /*Aquí se combina una imagen de fondo con un color de fondo, la imagen se repite verticalmente y se fija en su posición aunque se haga scroll*/
+  color: white; /*Aquí sobreescribo el valor de los párrafos para que el texto se vea*/
+}
+
+/* Border */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Reference/Properties/border */
+
+/*
+Esta es una propiedad abreviada para las siguientes propiedades CSS:
+    border-color
+    border-style
+    border-width
+*/
+
+.bordered {
+    border: 2px dotted black; /*Aquí se establece un borde de 2 píxeles de ancho, sólido y de color negro */
+}
+
+/* Sizing */
+/*
+Establece las propiedades:
+    - width
+    - height
+    - min-width
+    - min-heigth
+    - max-width
+    - max-heigtn
+*/
+
+/*Aquí estamos definiendo que debe de medir la mitad de la pantalla
+pero no menos de 500 px y no más de 800 px de ancho*/
+.sized-element {
+    background-color: aqua;
+    width: 50vw; /*50 view width (50% del ancho de la pantalla)*/
+    min-width: 500px;
+    max-width: 800px;
+}
+
+/* Marging */
+/*El margen lo que hace es añadir espacio hacia el EXTERIOR del elemento */
+.margin-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+/* 
+Lo anterior añade px de distancia a todos los lados del elemento (arriba, abajo, izquierda y derecha)
+También se puede añadir en un sólo lado:
+    - margin-bottom
+    - margin-top
+    - margin-left
+    - margin-right
+*/
+
+/* Padding */
+/*El padding o relleno lo que hace es añadir espacio hacia el INTERIOR del elemento */
+.padding-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.inner-box {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+/* Box Model */
+/*
+┌─────────────────────────┐
+│        Margin           │
+│  ┌───────────────────┐  │
+│  │      Border       │  │
+│  │ ┌───────────────┐ │  │
+│  │ │   Padding     │ │  │
+│  │ │ ┌───────────┐ │ │  │
+│  │ │ │Contenido  │ │ │  │
+│  │ │ └───────────┘ │ │  │
+│  │ └───────────────┘ │  │
+│  └───────────────────┘  │
+└─────────────────────────┘
+*/
+
+.padding-alternative-box {
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+/* Display */
+.inline-span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+}
+
+.inline-block-span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block;
+}
+
+/* Overflow */
+.overflow-hidden-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: hidden; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+.overflow-scroll-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: scroll; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+.overflow-auto-box {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    overflow: auto; /* Opciones: visible, hidden, scroll, auto */
+    margin-bottom: 20px;
+}
+
+/* Position */
+.position-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.relative-child-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.position-absolute-container {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.absolute-child-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.static-child-box {
+    position: static;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.sticky-child-box {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+.position-fixed-child-box {
+    position: fixed;
+    top: 1px;
+    right: 1px;
+    padding: 5px;
+    height: 30px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+/* Selectors */
+#codigo-id {
+    color: blueviolet;
+}
+
+a[href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors"] {
+    color: green;
+}
+
+/* Pseudos / pseudoelements */
+.hover-example:hover {
+    color:blueviolet;
+    font-size: 36px;
+    background-color: red;
+}
+
+.first-line-example::first-line {
+    color:blueviolet;
+}
+
+/* Combinators */
+article p {
+    color: rgb(255, 102, 0);
+}
+
+/* Herencia */
+
+#no-heredable {
+    border: 1px solid black;
+}
+
+/* Variables */
+/*
+:root {
+  --main-text-color: rgb(11, 113, 209);
+}
+
+p {
+    color: var(--main-text-color);
+}
+
+a {
+    color: var(--main-text-color);
+}
+*/
+
+/* Flexbox */
+.section-flex-example {
+    display: flex;
+    background-color: red;
+    padding: 10px;
+}
+
+.article-flex-example {
+    background-color: aqua;
+    border: black solid 1px;
+}
+
+.flex-align-container {
+    height: 100px;
+    border: 1px solid black;
+    background-color: aquamarine;
+
+    display: flex;
+    align-items: center; /*Alinea los elementos en el eje cross*/
+    justify-content: space-around; /*Añade espacio en el eje main*/
+}
+
+button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+}
+
+/*
+button:first-child {
+  align-self: flex-end;
+}
+*/
+
+/*Ejemplo de la documentación de Flexbox*/
+
+.flex-doc-example header {
+    background: purple;
+    height: 100px;
+}
+
+.flex-doc-example h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+}
+
+.flex-doc-example article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+    flex: 200px;
+}
+
+/* Add your flexbox CSS below here */
+
+.flex-doc-example section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*
+Los ejes de flex se intercambian dependiendo de flex-direction
+flex-direction: row ------> main axis horizontal
+flex-direction: column ------> main axis vertical
+
+main axis -> justify-content
+cross axis -> align-items
+*/
+
+/* Grid */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: red;
+  padding: 10px;
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  background-color: aqua;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  background-color: bisque;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  background-color: aquamarine;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+  background-color: blanchedalmond;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: blueviolet;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+  background-color: azure;
+}
+
+.grid-image-container {
+    display: grid;
+    justify-content: center;
+    gap: 1em;
+}
+
+.grid-image-container img {
+    width: 500px;
+}
+
+/* Flexbox vs Grid */
+.flex-container {
+    background-color: aquamarine;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+
+    padding: 1em;
+}
+
+.flex-card {
+    padding: .5em 1em;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+.grid-container {
+    background-color:rgb(203, 170, 235);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    gap: .5em;
+    padding: 1em;
+}
+
+/* Float */
+
+.float-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.float-text {
+    color: #00d;
+}
+
+.float-box {
+    float: left;
+    margin-right: 15px;
+
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: rgb(207, 232, 220);
+    padding: 1em;
+}
+
+/* Transition */
+
+#long1 {
+    font-size: 14px;
+    transition: font-size 5s;
+}
+
+#long1:hover {
+    font-size: 36px;
+}
+
+#fast1 {
+    font-size: 14px;
+    transition: font-size 0.5s;
+}
+
+#fast1:hover {
+    font-size: 36px;
+}
+
+#delay1 {
+    font-size: 14px;
+    transition: font-size 4s 2s; /* duración 4s, retraso 2s */
+}
+
+#delay1:hover {
+    font-size: 36px;
+}
+
+#easeout {
+    font-size: 14px;
+    transition: font-size 3s ease-out;
+}
+
+#easeout:hover {
+    font-size: 36px;
+}
+
+#linear {
+    font-size: 14px;
+    transition: font-size 3s linear;
+}
+
+#linear:hover {
+    font-size: 36px;
+}
+
+#cubic1 {
+    font-size: 14px;
+    transition: font-size 3s cubic-bezier(0.2, 0.4, 0.7, 0.8);
+}
+
+#cubic1:hover {
+    font-size: 36px;
+}
+
+.menuButton {
+  position: relative;
+  -moz-transition-property: background-color, color;
+  -moz-transition-duration: 1s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-duration: 1s;
+  -o-transition-property: background-color, color;
+  -o-transition-duration: 1s;
+  text-align: left;
+  background-color: grey;
+  left: 5px;
+  top: 5px;
+  height: 26px;
+  color: white;
+  border-color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  -moz-box-shadow: 2px 2px 1px black;
+  padding: 2px 4px;
+  border: solid 1px black;
+}
+
+.menuButton:hover {
+  position: relative;
+  -moz-transition-property: background-color, color;
+  -moz-transition-duration: 1s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-duration: 1s;
+  -o-transition-property: background-color, color;
+  -o-transition-duration: 1s;
+  background-color:white;
+  color:black;
+  -moz-box-shadow: 2px 2px 1px black;
+}
+
+.sidebar {
+  position:absolute;
+  width: 150px;
+  height: 170px;
+  background-color: #eeeeff;
+  color: black;
+  border: solid 1px black;
+  -moz-box-shadow: 2px 2px 1px black;
+}
+
+/* Animations */
+@keyframes crecer {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animation-img {
+    animation: crecer 5s infinite;
 }
